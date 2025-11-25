@@ -1,0 +1,65 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Sensitive data
+.env
+secrets.yaml
+credentials.*
+
+# Large files (keep references, not actual files)
+*.fasta
+*.fastq
+*.fq
+*.bam
+*.sam
+*.vcf
+*.bcf
+
+# Raw sequencing data
+raw-reads/
+raw-sequencing/
+
+# Large intermediate files (optional - adjust per your needs)
+# *.blast
+# *.align
+
+# System
+_site/
+.jekyll-cache/
+Gemfile.lock
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.python-version
+venv/
+env/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Logs
+*.log
+slurm-*.out
+
+# Temporary files
+*tmp*
+*temp*
+
+# Node (if using any JS tools)
+node_modules/
