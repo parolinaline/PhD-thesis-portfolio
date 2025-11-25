@@ -19,7 +19,33 @@ Comprehensive background on bacterial genomics, MLST methodology, plasmid divers
 
 ---
 
-## Chapter 3: Campylobacter Plasmid Diversity and Mobility
+## Chapter 3: Salmonella Bovismorbificans and Salmonella Give in New Zealand
+Comprehensive genomic and phenotypic characterization of *Salmonella* Bovismorbificans and Give serovars in New Zealand.
+
+### Key components:
+- MLST analysis
+- Antimicrobial resistance profiling
+- Plasmid diversity and horizontal gene transfer
+- Phylogenetic relationships and population structure
+
+- [Chapter 3 Materials](chapters/04-salmonella-surveillance/)
+
+---
+
+## Chapter 4: Allelic diversity of cmeABC genes in Campylobacter
+Analysis of the allelic diversity of *Campylobacter jejuni* and *Campylobacter coli* isolates, and analyses of the antimicrobial susceptibility profiles.
+
+### Key components:
+- Short-read sequencing data processing
+- cmeABC alleles extraction and comparison
+- Protein prediction
+- Antimicrobial and biocide susceptibility testing
+
+- [Chapter 4 Materials](chapters/04-campylobacter-effluxpumps/)
+
+---
+
+## Chapter 5: Campylobacter Plasmid Diversity and Mobility
 Genomic analysis of plasmids from *Campylobacter* isolates, focusing on conjugative plasmid types and horizontal gene transfer patterns.
 
 ### Key components:
@@ -28,30 +54,10 @@ Genomic analysis of plasmids from *Campylobacter* isolates, focusing on conjugat
 - Phylogenetic analysis and visualization
 - Comparative genomics across New Zealand isolates
 
-- [Chapter 3 Materials](chapters/03-campylobacter-plasmids/)
+- [Chapter 5 Materials](chapters/05-campylobacter-plasmids/)
 
 ---
 
-## Chapter 4: Salmonella Genomic Surveillance
-Comprehensive genomic and phenotypic characterization of *Salmonella* Bovismorbificans and Give serovars in New Zealand.
-
-### Key components:
-- cgMLST scheme implementation and MLST analysis
-- Antimicrobial resistance profiling
-- Sequence type distribution analysis
-- Plasmid ecology and horizontal gene transfer
-- Phylogenetic relationships and population structure
-
-- [Chapter 4 Materials](chapters/04-salmonella-surveillance/)
-
----
-
-## Chapter 5: Comparative Analysis
-Integration of findings across pathogen species, linking genomic data to epidemiological patterns.
-
-- [Chapter 5 Materials](chapters/05-comparative-analysis/)
-
----
 
 ## Chapter 6: Discussion and Conclusions
 Synthesis of results, implications for surveillance and public health, and future directions.
