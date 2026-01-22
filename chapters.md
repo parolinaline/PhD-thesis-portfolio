@@ -5,17 +5,11 @@ title: Chapters
 
 # Thesis Chapters
 
-## Chapter 1: Introduction
-Overview of antimicrobial resistance in foodborne pathogens and the significance of *Campylobacter* and *Salmonella* in New Zealand.
-
-- [Chapter 1 Materials](chapters/01-introduction/)
+## Chapter 1: General Introduction
 
 ---
 
 ## Chapter 2: Literature Review
-Comprehensive background on bacterial genomics, MLST methodology, plasmid diversity, and One Health frameworks.
-
-- [Chapter 2 Materials](chapters/02-literature/)
 
 ---
 
