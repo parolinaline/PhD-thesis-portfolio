@@ -23,6 +23,7 @@ Comprehensive genomic and phenotypic characterization of *Salmonella* Bovismorbi
 - Phylogenetic relationships and population structure
 
 - [Chapter 3 Materials](chapters/04-salmonella-surveillance/)
+- [Chapter 3 Materials](04-salmonella-surveillance/)
 
 ---
 
