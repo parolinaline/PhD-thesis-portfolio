@@ -54,9 +54,6 @@ Genomic analysis of plasmids from *Campylobacter* isolates, focusing on conjugat
 
 
 ## Chapter 6: Discussion and Conclusions
-Synthesis of results, implications for surveillance and public health, and future directions.
-
-- [Chapter 6 Materials](chapters/06-discussion/)
 
 ---
 
