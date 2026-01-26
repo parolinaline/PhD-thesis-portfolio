@@ -95,8 +95,6 @@ Each section includes:
 5. **Review scripts** for implementation details
 
 
-```
-
 ### For R Visualizations
 
 All R scripts use common packages:
@@ -105,7 +103,6 @@ All R scripts use common packages:
 - `gggenomes` - Comparative genomics
 - `dplyr`, `tidyr` - Data manipulation
 - Standard statistics packages
-
 
 
 ## Privacy and Access Control
