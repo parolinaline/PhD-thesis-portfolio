@@ -1,4 +1,16 @@
-```bash
+# starAMR pipeline
+
+## Overview
+This tool was used to detect point mutations associated with antimicrobial resistance phenotype (pointfinder), resistance genes using ResFinder, and confirm the ST using the MLST database.
+
+GitHub page: <(https://github.com/phac-nml/staramr)>
+
+
+### Input Data
+- Assembled genomes in FASTA format
+
+#### starAMR script
+
 #!/bin/bash -e
 #SBATCH --account=massey03742
 #SBATCH --job-name=StarAMR_massey03742
@@ -16,7 +28,10 @@ module load Apptainer/1.3.1
 export CMD="apptainer exec /nesi/project/massey03742/software/containers/staramr-0.10.0.aimg staramr"
 
 
-${CMD} search --pointfinder-organism campylobacter -o starAMR_campy /nesi/nobackup/massey03742/Campy_Nanopore_SACNZ/polished_assemblies/*.fasta
+${CMD} search --pointfinder-organism campylobacter -o starAMR_campy /nesi/nobackup/massey03742/Campy_SACNZ/polished_assemblies/*.fasta
+
+
 
 ```
 
+---
