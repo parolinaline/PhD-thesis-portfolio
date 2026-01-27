@@ -11,6 +11,7 @@ GitHub page: <(https://github.com/phac-nml/staramr)>
 
 #### starAMR script
 
+```bash
 #!/bin/bash -e
 #SBATCH --account=massey03742
 #SBATCH --job-name=StarAMR_massey03742
@@ -29,7 +30,6 @@ export CMD="apptainer exec /nesi/project/massey03742/software/containers/staramr
 
 
 ${CMD} search --pointfinder-organism campylobacter -o starAMR_campy /nesi/nobackup/massey03742/Campy_SACNZ/polished_assemblies/*.fasta
-
 
 
 ```
