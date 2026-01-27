@@ -88,7 +88,7 @@ Each section includes:
 
 ### For Thesis Reviewers
 
-1. **Start with [Chapters](chapters.html)** to navigate by topic
+1. **Start with [Chapters](./chapters.md)** to navigate by topic
 2. **Follow the methodology section** to understand analysis steps
 3. **View results sections** for key findings
 4. **Access raw/processed data** to verify outputs
