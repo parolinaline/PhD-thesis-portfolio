@@ -17,13 +17,6 @@ title: Chapters
 Comprehensive genomic and phenotypic characterization of *Salmonella* Bovismorbificans and Give serovars in New Zealand.
 
 ### Key components:
-- MLST analysis
-- Antimicrobial resistance profiling
-- Plasmid diversity and horizontal gene transfer
-- Phylogenetic relationships and population structure
-
-- [Chapter 3 Materials](chapters/04-salmonella-surveillance/)
-- [Chapter 3 Materials](04-salmonella-surveillance/)
 
 ---
 
@@ -31,12 +24,6 @@ Comprehensive genomic and phenotypic characterization of *Salmonella* Bovismorbi
 Analysis of the allelic diversity of *Campylobacter jejuni* and *Campylobacter coli* isolates, and analyses of the antimicrobial susceptibility profiles.
 
 ### Key components:
-- Short-read sequencing data processing
-- cmeABC alleles extraction and comparison
-- Protein prediction
-- Antimicrobial and biocide susceptibility testing
-
-- [Chapter 4 Materials](chapters/04-campylobacter-effluxpumps/)
 
 ---
 
@@ -46,10 +33,10 @@ Genomic analysis of plasmids from *Campylobacter* isolates, focusing on conjugat
 ### Key components:
 - Long-read sequencing data processing
 - Plasmid classification methodology
-- Phylogenetic analysis and visualization
-- Comparative genomics across New Zealand isolates
+- Plasmid comparison and visualization
+- AMR plasmids
 
-- [Chapter 5 Materials](chapters/05-campylobacter-plasmids/)
+- [Chapter 5 Materials](./Chapter05_Campylobacter_plasmids/)
 
 ---
 
