@@ -16,9 +16,16 @@ logo: /assets/images/logo.png
 
 # Navigation
 header_pages:
-  - index.md
+  - Chapter05_Campylobacter_plasmids/Appendix/README.md
+  - Chapter05_Campylobacter_plasmids/Methods/Assembly_method.md
+  - Chapter05_Campylobacter_plasmids/Methods/Plasmid_typing_classification.md
+  - Chapter05_Campylobacter_plasmids/Methods/README.md
+  - Chapter05_Campylobacter_plasmids/Methods/RFPlasmid.md
+  - Chapter05_Campylobacter_plasmids/README.md
   - chapters.md
-  - about.md
+  - METHODOLOGY_TEMPLATE.md
+  - README.md
+
 
 # Build settings
 markdown: kramdown
