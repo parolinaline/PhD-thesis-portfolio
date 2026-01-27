@@ -12,14 +12,6 @@ This repository serves as supplementary materials for thesis chapters, enabling 
 - Reproduce analyses
 
 ## Quick Start
-
-### View the Site
-
-This repository is published as a GitHub Pages website. Visit:
-```
-https://parolinaline.github.io/thesis-portfolio/
-```
-
 ### Local Setup
 
 If you want to build and test locally:
