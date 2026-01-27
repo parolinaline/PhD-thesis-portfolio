@@ -17,7 +17,7 @@ This repository serves as supplementary materials for thesis chapters, enabling 
 
 This repository is published as a GitHub Pages website. Visit:
 ```
-https://username.github.io/thesis-portfolio/
+https://parolinaline.github.io/thesis-portfolio/
 ```
 
 ### Local Setup
@@ -43,13 +43,12 @@ bundle exec jekyll serve
 
 Each chapter follows a consistent structure:
 
-- **Introduction/Background**: Context and research questions
 - **Methodology**: Step-by-step workflows with documented scripts
   - Bash scripts for HPC pipelines
   - Python scripts for complex analysis
   - R scripts for visualization and statistics
-- **Results**: Analysis outputs, figures, and supplementary tables
-- **Data**: Raw and processed data files
+- **Figures**: Analysis outputs, figures, and supplementary tables
+- **Appendix**: Raw and processed data files
 
 ## Key Features
 
@@ -76,13 +75,6 @@ Each section includes:
 - README files with detailed methods
 - Step-by-step guides for complex analyses
 - Links between related sections
-
-### Data
-
-- Raw sequencing data (assemblies in FASTA format)
-- Processed intermediate files
-- Final results tables (Excel, CSV, TSV)
-- Metadata files with sample information
 
 ## Using This Repository
 
@@ -140,4 +132,4 @@ ggtree, aplot, gggenomes, ggplot2, dplyr, tidyr
 
 ---
 
-*Last updated: November 2025*
+*Last updated: January 2026*
