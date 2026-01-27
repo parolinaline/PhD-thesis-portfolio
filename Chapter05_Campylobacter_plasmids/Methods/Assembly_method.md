@@ -1,32 +1,68 @@
-# [Subsection Title] Methodology
+# Assemblying genomes
 
 ## Overview
 
-[Brief description of what this subsection does and its purpose in the larger analysis workflow]
+Here I explain how the assemblies were obtained for Chapter 05, starting from the filtering process of the reads until the polishing steps. I used two different approaches, and the final assemblies were compared and chosen as described on the thesis. The tools and versions used are indicated in the scripts. 
 
+## Workflow Summary
+
+1 - Filtering Nanopore long-reads using FiltLong
+2 - Assemblying genomes:
+    a- Unicycler hybrid assembly mode using Nanopore long-reads and Illumina short-reads
+    b- Flye assembly using only Nanopore long-reads
+3- Polish assemblies using Nanopore long-reads and Illumina short-reads 
+
+
+### Step-by-Step Execution
+#### Step 1: [Filtering Nanopore long-reads after basecalling]
+#### Input Data
+
+| File | Format | Description |
+|------|--------|-------------|
+| input_file.fastq | fastq | [Nanopore long-reads] |
+
+I filtered the Nanopore long-reads using Filtlong.
+<https://github.com/rrwick/Filtlong>
+I used the following parameters:
+```bash
+--min_length,    I used 1000: Discard any read which is shorter than 1kbp
+--keep_percent,    I used 95: It removes 5% of the worst reads. This is measured by bp, not by read count.
+```
+
+```bash
+#!/bin/bash -e
+#SBATCH --account=massey03742
+#SBATCH --job-name=filtlong # job name (shows up in the queue)
+#SBATCH --output=slurmlog/%A.%a.%x.%j.out
+#SBATCH --error=slurmlog/%x.%j.err
+#SBATCH --time=10:00:00 # Walltime (HH:MM:SS)
+#SBATCH --cpus-per-task=6 # number of cpus/threads, stick to 2 for now
+#SBATCH --mem=8G            # RAM
+
+#access the working directory
+cd /nesi/nobackup/massey03742/Auckland_results/super_high_accuracy_fastq_files/campy
+
+module purge
+module load Filtlong/0.2.0
+
+# Loop through each porechop fastq file in the current directory
+for input_file in *.fastq; do
+    # Get the base name of the file (without the .fastq extension)
+    base_name=$(basename "$input_file".fastq)
+    # Define the output file name
+    output_file="${base_name}_FL.fastq.gz"
+    # Run Filtlong on the input file and save the output
+    filtlong --min_length 1000 --keep_percent 95 "$input_file" | gzip > "$output_file"
+done
+
+```
+
+
+COPY FROM HERE
 ## Workflow Summary
 
 [1-2 paragraph description of the analysis approach, key steps, and outputs]
 
-## Requirements
-
-### Software and Packages
-
-- [Software name] (v.x.x) - [purpose]
-- [Software name] (v.x.x) - [purpose]
-
-**R packages:**
-```R
-# Install if needed
-install.packages(c("package1", "package2"))
-# Or from Bioconductor:
-BiocManager::install(c("package1"))
-```
-
-**Python packages:**
-```bash
-pip install package1 package2
-```
 
 ### Input Data
 
@@ -36,27 +72,7 @@ pip install package1 package2
 | metadata.csv | CSV | [Description] |
 | reference.db | Database | [Description] |
 
-### Computing Resources
 
-- **CPU cores**: X (per job)
-- **Memory**: X GB
-- **Time estimate**: X hours
-- **HPC platform**: NeSI / Local
-- **Storage**: X GB (temporary)
-
-## Files in This Directory
-
-```
-├── script_name.sh/.py/.R    # Main workflow script
-├── script_helper.py         # Helper functions (if applicable)
-├── README.md                # This file
-├── input/                   # Input data (or symlinks to data)
-│   ├── raw/
-│   └── processed/
-└── output/                  # Analysis outputs
-    ├── results/
-    └── logs/
-```
 
 ## Usage
 
@@ -137,37 +153,6 @@ bash script_name.sh \
   -v
 ```
 
-## Troubleshooting
-
-### Common Issues
-
-**Error: "Command not found: [software]"**
-- Ensure software is installed: `which software_name`
-- Check PATH: `echo $PATH`
-- Load module on HPC: `module load software_name`
-
-**Error: "Insufficient memory"**
-- Increase memory allocation: `-m 64` (for 64 GB)
-- Reduce number of threads: `-t 4`
-- Process data in smaller batches
-
-**Error: "Permission denied"**
-- Check file permissions: `ls -la`
-- Make script executable: `chmod +x script_name.sh`
-
-**Output files not generated**
-- Check error messages: `cat logs/error.log`
-- Verify input file format: `head input_file.fasta`
-- Run script with verbose flag: `-v`
-
-### Getting Help
-
-If you encounter issues:
-1. Check the error log: `logs/error.log` or SLURM output file
-2. Review input file format and contents
-3. Test with a smaller subset of data
-4. Review software documentation
-
 ## Outputs
 
 ### Main Results
@@ -178,62 +163,12 @@ If you encounter issues:
 | analysis_results.xlsx | Excel | [Description] |
 | summary_report.txt | Text | [Description] |
 
-### Supporting Files
-
-- `logs/` - Workflow execution logs
-- `temp/` - Intermediate files (can be deleted after verification)
-- `figures/` - Generated plots and visualizations
-
-## Verification
-
-### Check Your Results
-
-Run this verification script to ensure outputs are correct:
-
-```bash
-bash verify_output.sh output_directory/
-```
-
-Or manually verify:
-
-```bash
-# Check file sizes are reasonable
-ls -lh output/*.csv output/*.xlsx
-
-# Quick data inspection
-head -20 output/main_output.csv
-wc -l output/main_output.csv  # Count rows
-
-# Check for errors in logs
-grep -i "error\|warning" logs/*.log
-```
-
 ### Expected Output Summary
 
 - Number of sequences processed: [X]
 - Number of hits/matches: [Y]
 - Main output file size: ~[X] MB
 - Expected runtime: [X-Y] hours
-
-## Performance Notes
-
-### Runtime Estimates
-
-- Local execution (4 cores): ~X hours
-- NeSI execution (8 cores): ~X hours
-- Scales roughly: O(n log n) with data size
-
-### Memory Usage
-
-- Peak memory: ~X GB (for typical dataset)
-- Memory scales linearly with data size
-
-### Tips for Large Datasets
-
-- Increase number of threads: `-t 16` or higher
-- Use parallel processing: `GNU parallel` or `xargs`
-- Process in chunks: see `split_data.sh`
-- Check NeSI job parameters in `.sbatch` file
 
 ## References and Documentation
 
