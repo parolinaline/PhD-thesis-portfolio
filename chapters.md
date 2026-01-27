@@ -38,6 +38,10 @@ Genomic analysis of plasmids from *Campylobacter* isolates, focusing on conjugat
 
 - [Chapter 5 Materials](./Chapter05_Campylobacter_plasmids/)
 
+#### Appendices
+Additional technical resources, detailed protocols, and supplementary data.
+- [Appendix Materials](./Chapter05_Campylobacter_plasmids/Appendix)
+
 ---
 
 
@@ -45,8 +49,5 @@ Genomic analysis of plasmids from *Campylobacter* isolates, focusing on conjugat
 
 ---
 
-## Appendices
-Additional technical resources, detailed protocols, and supplementary data.
 
-- [Appendix Materials](chapters/appendices/)
 
