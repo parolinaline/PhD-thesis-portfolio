@@ -638,5 +638,4 @@ All fasta files can now be moved to the desired directory to start in-silico ana
 
 ---
 
-*Last updated: [Date]*
-*Tested on: [OS/Platform] with [Software versions]*
+*Last updated: [28 January 2026]*
