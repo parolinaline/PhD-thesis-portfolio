@@ -1,3 +1,16 @@
+# MOB-suite typer
+
+## Overview
+This tool was used to predict the mobility of plasmid contigs obtained with Nanopore long reads and Illumina short reads.
+
+GitHub page: <(https://github.com/phac-nml/mob-suite)>
+
+
+### Input Data
+- Plasmid fasta files in FASTA format
+
+#### MOB-suite script
+
 ```bash 
 
 #!/bin/bash -e
@@ -17,7 +30,7 @@ module load Apptainer/1.3.1
 export CMD="apptainer exec /nesi/project/massey03742/software/mob_suite/mob_suite_3.1.9.aimg mob_typer"
 
 
-#${CMD} --multi --infile #/nesi/nobackup/massey03742/Campy_Nanopore_SACNZ/best_assemblies/plasmid_contigs/plasmid_combined.fasta --out_file #Campy_mobsuite_typer_plasmids.txt 
+#${CMD} --multi --infile #/nesi/nobackup/massey03742/Campy_SACNZ/polished_assemblies/plasmid_contigs/plasmid_combined.fasta --out_file #Campy_mobsuite_typer_plasmids.txt 
 
 
 ${CMD} --multi --infile ./SC0134_2_np2.fasta --out_file Campy_mobtyper_SC0134.txt
