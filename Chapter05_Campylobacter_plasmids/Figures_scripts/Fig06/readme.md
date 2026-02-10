@@ -1,4 +1,4 @@
-#### Description
+## Description
 
 Figure 6 – Horizontal visualisation and comparison of nucleotide sequences from conjugative plasmid types CP4 (A), CP5 (B), and CP10 (C). The cluster labels next to the isolate’s ID refer to plasmids with ≥80% of identity based on cd-hit analysis. The coloured arrows refer to the function of the genes according to Bakta annotation, as described in the legend. The grey links display the similarity of plasmid nucleotide sequences using BLASTn. GGGenomes   was used for visualisation.
 
