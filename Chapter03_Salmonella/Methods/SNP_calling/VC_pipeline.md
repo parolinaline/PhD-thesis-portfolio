@@ -558,37 +558,6 @@ echo "Tree file: iqtree_gubbins_masked.treefile (use this in TempEst)"
 
 ---
 
-## Sanity Checks
-
-Before trusting your results, verify:
-
-### 1. Core genome size
-```bash
-# How much of the genome is core?
-grep -v "^>" core.full.aln | head -1 | tr -d '\n' | wc -c
-# Compare to reference length - should be >80% for closely related isolates
-```
-
-### 2. SNP count comparison
-```bash
-# Compare to Snippy results
-echo "Clair3 pipeline SNPs:"
-grep -v "^>" core.aln | head -1 | wc -c
-
-echo "Snippy SNPs (if available):"
-grep -v "^>" /path/to/snippy/core.aln | head -1 | wc -c
-```
-
-### 3. Check for problematic isolates
-```bash
-# Look for isolates with lots of Ns (low coverage)
-seqkit fx2tab all_isolates.fasta | \
-awk '{n=gsub(/N/,"N",$2); print $1"\t"n"\t"length($2)"\t"n/length($2)*100"%"}' | \
-sort -t$'\t' -k4 -rn | head -20
-```
-
----
-
 ## Output Summary
 
 | File | Description | Use for |
@@ -601,46 +570,12 @@ sort -t$'\t' -k4 -rn | head -20
 
 ---
 
-## Key Differences from Original Pipeline
-
-| Issue in Original | Fix Applied |
-|-------------------|-------------|
-| Missing genotypes filled with reference (`setGT -n 0p`) | Callable position masks created; low-coverage = N |
-| VCF merging before consensus | Individual consensus FASTAs generated first |
-| VCFtools for core extraction | snp-sites for cleaner core genome extraction |
-| No coverage-based masking | `samtools depth` + BEDTools masking |
-
----
 
 ## Link to thesis
 
 - This analysis is linked to section [insert section] of my thesis.
 
-## Author Notes
-
-This pipeline was corrected to properly handle missing data. The key insight is that positions without variant calls should NOT be assumed to be reference — they should be masked as unknown (N) unless coverage confirms the reference base.
 
 ---
 
 *Last updated: 06 February 2026*
-#SBATCH --account=massey03742
-#SBATCH --job-name=vcf_filter
-#SBATCH --output=slurmlog/%x.%j.out
-| QUAL>20 | Keeps variants with Phred-scaled quality score above 20 (≥99% confidence) |
-| DP>10 | Requires minimum read depth of 10 at the variant site |
-| TYPE="snp" | Keep only SNPs, remove indels |
-
-        if [[ -f "$vcf_file" ]]; then
-            new_filename="${isolate}.vcf.gz"
-            cp "$vcf_file" "${DEST_FOLDER}/${new_filename}"
-            # Also copy the index if it exists
-```
-
-### 3b. Filter VCF files
-
-            [[ -f "${vcf_file}.tbi" ]] && cp "${vcf_file}.tbi" "${DEST_FOLDER}/${new_filename}.tbi"
-            echo "Copied $vcf_file to ${DEST_FOLDER}/${new_filename}"
-done
-        else
-            echo "VCF file not found in $dir"
-        fi
