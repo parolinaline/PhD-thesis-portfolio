@@ -1,0 +1,254 @@
+DATASET_SYMBOL
+#Symbol datasets allow the display of various symbols on the branches , or outside of the tree. For each node, one or more symbols can be defined.
+#Each symbol's color, size and position (along the branch or externally) can be specified.
+
+#lines starting with a hash are comments and ignored during parsing
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file.
+SEPARATOR TAB
+#SEPARATOR SPACE
+#SEPARATOR COMMA
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL	2. Source
+
+#dataset color (can be changed later)
+COLOR	#cc79a7
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#Each dataset can have a legend, which is defined using LEGEND_XXX fields below
+#For each row in the legend, there should be one shape, color and label.
+#Optionally, you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning, do NOT define these values
+#Optionally, shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape, you can define a scaling factor between 0 and 1.
+#Optionally, shapes can be inverted (LEGEND_SHAPE_INVERT). When inverted, shape border will be drawn using the selected color, and the fill color will be white.
+#To order legend entries horizontally instead of vertically, set LEGEND_HORIZONTAL to 1
+#Legend can be hidden initially by setting LEGEND_VISIBLE to 0
+#Shape should be a number between 1 and 6, or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+#LEGEND_TITLE,Dataset legend
+#LEGEND_SCALE,1
+#LEGEND_POSITION_X,100
+#LEGEND_POSITION_Y,100
+#LEGEND_HORIZONTAL,0
+#LEGEND_VISIBLE,1
+#LEGEND_SHAPES,1,2,3
+#LEGEND_COLORS,#ff0000,#00ff00,#0000ff
+#LEGEND_LABELS,value1,value2,value3
+#LEGEND_SHAPE_SCALES,1,1,0.5
+#LEGEND_SHAPE_INVERT,0,0,0
+
+
+#largest symbol will be displayed with this size, others will be proportionally smaller.
+MAXIMUM_SIZE	15
+
+#symbols can be filled with solid color, or a gradient
+#GRADIENT_FILL,1
+
+#spacing between symbol columns, only for external symbols
+#SYMBOL_SPACING,10
+
+#display or hide the dataset label above first external symbols column
+#SHOW_LABELS 1
+
+#dataset label size factor
+#LABEL_SIZE_FACTOR 1
+
+#dataset label rotation
+#LABEL_ROTATION 0
+
+#dataset label shift in pixels (positive or negative)
+#LABEL_SHIFT 0
+
+#align the dataset label to the tree circle; only applies in circular display mode
+LABEL_ALIGN_TO_TREE	0
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+#the following fields are required for each node:
+#ID,symbol,size,color,fill,position,label
+
+#symbol should be a number between 1 and 5:
+#1: rectangle
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+#size can be any number. Maximum size in the dataset will be displayed using MAXIMUM_SIZE, while others will be proportionally smaller
+#color can be in hexadecimal, RGB or RGBA notation. If RGB or RGBA are used, dataset SEPARATOR cannot be comma.
+#fill can be 1 or 0. If set to 0, only the outline of the symbol will be displayed.
+#position can be either:
+  #a number between 0 and 1 and defines the position of the symbol on the branch (for example, position 0 is exactly at the start of node branch, position 0.5 is in the middle, and position 1 is at the end)
+  #a negative integer number, which will position the symbol outside the tree. Position -1 will be the first external symbol column, -2 the second one and so on.
+
+DATA
+#Examples
+#internal node will have a red filled circle in the middle of the branch
+#9606|184922,2,10,#ff0000,1,0.5
+#node 100379 will have a blue star outline at the start of the branch, half the size of the circle defined above (size is 5 compared to 10 above)
+#100379,3,5,#0000ff,0,0
+#node 100379 will also have a filled green rectangle in the middle of the branch, same size as the circle defined above (size is 10)
+#100379,1,10,#00ff00,1,0.5
+#Homo sapiens node will have 2 external symbols, a blue filled circle first (position -1), followed by an empty yellow star (position -2)
+#9606,2,10,#0000ff,1,-1,external 1
+#SGV006	3	10	#1f77b4	1	-5	blaTEM-1B + mph(A)
+
+SC1065_Contig_1_5516.09_Circ	5	10	#C43428	1	-5	Sheep
+SC0941_Contig_1_10315.2_Circ	5	10	#0DA214	1	-5	Poultry
+SC0987_Contig_2_5043.07_Circ	5	10	#0DA214	1	-5	Poultry
+SC1689_Contig_1_5256.73_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0391_Contig_1_6602.5_Circ	5	10	#C4CB2C	1	-5	Human
+SC0470_Contig_1_3146.75_Circ	5	10	#C4CB2C	1	-5	Human
+SC0476_Contig_1_2457.8_Circ	5	10	#0DA214	1	-5	Poultry
+SC1694_Contig_1_6445.4_Circ	5	10	#0DA214	1	-5	Poultry
+SC1705_Contig_1_5857.32_Circ	5	10	#0DA214	1	-5	Poultry
+SC0435_Contig_1_8068.69_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0438_Contig_1_17961.6_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0585_Contig_1_4448.09_Circ	5	10	#C43428	1	-5	Sheep
+SC0850_Contig_1_25745.4_Circ	5	10	#C43428	1	-5	Sheep
+SC0851_Contig_1_39003.9_Circ	5	10	#C43428	1	-5	Sheep
+SC1612_Contig_1_1166.61_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1669_Contig_1_1483.31_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0725_Contig_2_3001.64_Circ	5	10	#C4CB2C	1	-5	Human
+SC0086_Contig_1_412.781_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0087_Contig_1_344.855_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0250_Contig_1_5239.02_Circ	5	10	#C43428	1	-5	Sheep
+SC0481_Contig_1_5130.27_Circ	5	10	#C43428	1	-5	Sheep
+SC0820_Contig_1_13127_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1416_Contig_1_1799.37_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1417_Contig_1_2335.7_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0209_Contig_1_11986.1_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0083_Contig_1_743.574_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1272_Contig_1_9549.44_Circ	5	10	#C4CB2C	1	-5	Human
+SC0153_Contig_1_48.3484_Circ	5	10	#C4CB2C	1	-5	Human
+SC0199_Contig_1_57.4932_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1718_Contig_2_137.32_Circ	5	10	#0DA214	1	-5	Poultry
+SC0733_Contig_1_356.027_Circ	5	10	#C4CB2C	1	-5	Human
+SC1596_Contig_1_126.651_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1141_Contig_1_355.593_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1096_Contig_1_142.013_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0206_Contig_1_207.085_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1097_Contig_1_235.515_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1204_Contig_1_267.883_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1606_Contig_1_295.584_Circ	5	10	#C4CB2C	1	-5	Human
+SC0336_Contig_1_146.763_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0339_Contig_1_113.237_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0955_Contig_1_120.809_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1438_Contig_1_187.293_Circ	5	10	#C43428	1	-5	Sheep
+SC1671_Contig_1_106.489_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0204_Contig_1_272.897_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0240_Contig_1_221.364_Circ	5	10	#C4CB2C	1	-5	Human
+SC0242_Contig_1_247.185_Circ	5	10	#C43428	1	-5	Sheep
+SC0244_Contig_1_222.781_Circ	5	10	#C43428	1	-5	Sheep
+SC0321_Contig_1_142.494_Circ	5	10	#C4CB2C	1	-5	Human
+SC0707_Contig_1_296.578_Circ	5	10	#C43428	1	-5	Sheep
+SC1613_Contig_1_224.829_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1615_Contig_1_254.251_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1668_Contig_1_189.039_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0201_Contig_1_205.978_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0437_Contig_1_147.123_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1134_Contig_1_305.364_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0436_Contig_1_133.121_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0860_Contig_1_537.39_Circ	5	10	#C43428	1	-5	Sheep
+SC0893_Contig_1_233.133_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1627_Contig_1_271.276_Circ	5	10	#C43428	1	-5	Sheep
+SC0255_Contig_1_197.262_Circ	5	10	#C43428	1	-5	Sheep
+SC1347_Contig_2_402.165_Circ	5	10	#C4CB2C	1	-5	Human
+SC1238_Contig_1_190.646_Circ	5	10	#0DA214	1	-5	Poultry
+SC1131_Contig_1_168.997_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0887_Contig_1_214.599_Circ	5	10	#C4CB2C	1	-5	Human
+SC0275_Contig_1_95.0359_Circ	5	10	#C4CB2C	1	-5	Human
+SC1546_Contig_1_227.961_Circ	5	10	#C4CB2C	1	-5	Human
+SC1595_Contig_1_82.5635_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0732_Contig_2_265.881_Circ	5	10	#C4CB2C	1	-5	Human
+SC0849_Contig_1_273.334_Circ	5	10	#C43428	1	-5	Sheep
+SC0952_Contig_1_115.85_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1548_Contig_1_191.935_Circ	5	10	#C4CB2C	1	-5	Human
+SC1315_Contig_1_172.535_Circ	5	10	#0DA214	1	-5	Poultry
+SC0173_Contig_1_238.691_Circ	5	10	#C4CB2C	1	-5	Human
+SC1260_Contig_1_329.834_Circ	5	10	#C4CB2C	1	-5	Human
+SC0388_Contig_2_118.586_Circ	5	10	#C43428	1	-5	Sheep
+SC0237_Contig_2_209.334_Circ	5	10	#C4CB2C	1	-5	Human
+SC1597_Contig_1_166.608_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1013_Contig_1_103.391_Circ	5	10	#0DA214	1	-5	Poultry
+SC1574_Contig_1_188.97_Circ	5	10	#C4CB2C	1	-5	Human
+SC1281_Contig_1_544.344_Circ	5	10	#C4CB2C	1	-5	Human
+SC1593_Contig_1_89.94_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1591_Contig_1_143.343_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0332_Contig_1_151.395_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1712_Contig_1_217.86_Circ	5	10	#0DA214	1	-5	Poultry
+SC0211_Contig_1_164.543_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0582_Contig_1_122.855_Circ	5	10	#C43428	1	-5	Sheep
+SC1327_Contig_1_220.689_Circ	5	10	#0DA214	1	-5	Poultry
+SC0217_Contig_1_211.088_Circ	5	10	#C4CB2C	1	-5	Human
+SC0238_Contig_1_127.014_Circ	5	10	#C4CB2C	1	-5	Human
+SC0811_Contig_1_556.434_Circ	5	10	#C4CB2C	1	-5	Human
+SC1551_Contig_1_190.885_Circ	5	10	#C4CB2C	1	-5	Human
+SC0327_Contig_1_85.1071_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0330_Contig_1_117.21_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0796_Contig_1_502.26_Circ	5	10	#C4CB2C	1	-5	Human
+SC1474_Contig_1_154.597_Circ	5	10	#C4CB2C	1	-5	Human
+SC0897_Contig_1_263.378_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1044_Contig_1_303.064_Circ	5	10	#C4CB2C	1	-5	Human
+SC1206_Contig_1_287.11_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0266_Contig_1_674.74_Circ	5	10	#C4CB2C	1	-5	Human
+SC1486_Contig_1_201.182_Circ	5	10	#C4CB2C	1	-5	Human
+SC1452_Contig_1_136.753_Circ	5	10	#C43428	1	-5	Sheep
+SC0433_Contig_1_48.4969_Circ	5	10	#0DA214	1	-5	Poultry
+SC0450_Contig_1_186.861_Circ	5	10	#C4CB2C	1	-5	Human
+SC0490_Contig_1_100.343_Circ	5	10	#C4CB2C	1	-5	Human
+SC1017_Contig_1_445.965_Circ	5	10	#C4CB2C	1	-5	Human
+SC1210_Contig_1_252.002_Circ	5	10	#C43428	1	-5	Sheep
+SC1211_Contig_1_220.596_Circ	5	10	#C43428	1	-5	Sheep
+SC0202_Contig_1_256.734_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0695_Contig_1_324.05_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1043_Contig_1_288.835_Circ	5	10	#C4CB2C	1	-5	Human
+SC1314_Contig_1_256.24_Circ	5	10	#0DA214	1	-5	Poultry
+SC1588_Contig_1_113.077_Circ	5	10	#C43428	1	-5	Sheep
+SC1586_Contig_1_153.278_Circ	5	10	#C43428	1	-5	Sheep
+SC1587_Contig_1_119.666_Circ	5	10	#C43428	1	-5	Sheep
+SC0126_Contig_1_91.755_Circ	5	10	#C43428	1	-5	Sheep
+SC0267_Contig_1_176.244_Circ	5	10	#C4CB2C	1	-5	Human
+SC0317_Contig_1_125.517_Circ	5	10	#C4CB2C	1	-5	Human
+SC1625_Contig_1_298.264_Circ	5	10	#C43428	1	-5	Sheep
+SC0803_Contig_1_472.018_Circ	5	10	#C4CB2C	1	-5	Human
+SC0951_Contig_1_254.545_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC0103_Contig_1_179.388_Circ	5	10	#C4CB2C	1	-5	Human
+SC0560_Contig_1_68.2659_Circ	5	10	#C4CB2C	1	-5	Human
+SC0474_Contig_1_109.991_Circ	5	10	#0DA214	1	-5	Poultry
+SC0841_Contig_1_91.0205_Circ	5	10	#C4CB2C	1	-5	Human
+SC0880_Contig_1_234.628_Circ	5	10	#C4CB2C	1	-5	Human
+SC0813_Contig_1_380.144_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1472_Contig_1_157.484_Circ	5	10	#C4CB2C	1	-5	Human
+SC0554_Contig_1_90.6268_Circ	5	10	#C4CB2C	1	-5	Human
+SC0665_Contig_1_376.613_Circ	5	10	#C4CB2C	1	-5	Human
+SC0210_Contig_1_263.781_Circ	5	10	#2C5ACB	1	-5	Cattle
+SC1161_Contig_1_368.061_Circ	5	10	#C4CB2C	1	-5	Human
+SC1470_Contig_1_137.546_Circ	5	10	#C4CB2C	1	-5	Human
+SC0482_Contig_1_115.304_Circ	5	10	#C43428	1	-5	Sheep
+SC0987_Contig_1_55.8623_Circ	5	10	#0DA214	1	-5	Poultry
+SC1718_Contig_1_133.324_Circ	5	10	#0DA214	1	-5	Poultry
+SC1292_Contig_1_250.739_Circ	5	10	#C4CB2C	1	-5	Human
+SC1318_Contig_1_222.424_Circ	5	10	#0DA214	1	-5	Poultry
+SC1320_Contig_1_119.905_Circ	5	10	#0DA214	1	-5	Poultry
+SC1386_Contig_1_146.736_Circ	5	10	#C4CB2C	1	-5	Human
