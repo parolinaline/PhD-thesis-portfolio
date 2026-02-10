@@ -6,9 +6,9 @@
 
 [## Figure 03](./Fig03)  
 
-## Figure 04
+[## Figure 04](./Fig04)
 
-## Figure 05
+[## Figure 05](./Fig05)
 
 ## Figure 06
 
