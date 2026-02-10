@@ -4,12 +4,12 @@ Figure 2  - Distribution of plasmid  marker combinations per plasmid contig and 
 ### *Campylobacter jejuni* isolates
 
 #### Input files
-Excel file with plasmid markers./n
-[plasmid markers for *jejuni*](./jejuni_markers.csv)/n
-Excel file with metadata for boxplot/n
-[boxplot](./boxplot_jejuni.csv)/n
-Output file/n
-[output](./fig02_j.pdf)/n
+Excel file with plasmid markers.  
+[plasmid markers for *jejuni*](./jejuni_markers.csv)  
+Excel file with metadata for boxplot  
+[boxplot](./boxplot_jejuni.csv)  
+Output file  
+[output](./fig02_j.pdf)  
 
 
 ```r
