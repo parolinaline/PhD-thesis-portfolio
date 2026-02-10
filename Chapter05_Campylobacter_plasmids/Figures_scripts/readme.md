@@ -14,6 +14,6 @@
 
 [## Figure 07](./Fig07)
 
-## Figure 08
+[## Figure 08](./Fig08)
 
-## Figure 09
+[## Figure 09](./Fig09)
