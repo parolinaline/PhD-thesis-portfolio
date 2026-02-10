@@ -1,0 +1,214 @@
+DATASET_COLORSTRIP
+#In colored strip datasets, each ID is associated to a color box/strip and can have an optional label. Color can be specified in hexadecimal, RGB or RGBA notation. When using RGB or RGBA notation, you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+
+SEPARATOR TAB
+#SEPARATOR COMMA
+#SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+
+DATASET_LABEL	3. Clonal Complex
+FIELD_LABELS	3. Clonal Complex
+
+
+#dataset color (can be changed later)
+COLOR	#d80032
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1, branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color, it will be colored the same, ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES	0
+
+#each dataset can have a legend, which is defined below
+#for each row in the legend, there should be one shape, color and label
+#shape should be a number between 1 and 5:
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+
+LEGEND_TITLE	Clonal Complex												
+LEGEND_SHAPES	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+LEGEND_COLORS	#54478c	#2c699a	#0db39e	#83e377	#efea5a	#f29e4c	#1a4301	#b185db	#192a51	#f26a8d	#91e5f6	#d80032	#cfdbd5	#FF00FF	
+LEGEND_LABELS	21	42	48	52	61	206	257	354	403	508	692	828	NA	1034
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#width of the colored strip
+#STRIP_WIDTH 50
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+MARGIN	25
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the color strip
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+
+SC1065_Contig_1_5516.09_Circ	#d80032	828
+SC0941_Contig_1_10315.2_Circ	#d80032	828
+SC0987_Contig_2_5043.07_Circ	#d80032	828
+SC1689_Contig_1_5256.73_Circ	#d80032	828
+SC0391_Contig_1_6602.5_Circ	#d80032	828
+SC0470_Contig_1_3146.75_Circ	#54478c	21
+SC0476_Contig_1_2457.8_Circ	#d80032	828
+SC1694_Contig_1_6445.4_Circ	#d80032	828
+SC1705_Contig_1_5857.32_Circ	#d80032	828
+SC0435_Contig_1_8068.69_Circ	#d80032	828
+SC0438_Contig_1_17961.6_Circ	#d80032	828
+SC0585_Contig_1_4448.09_Circ	#d80032	828
+SC0850_Contig_1_25745.4_Circ	#d80032	828
+SC0851_Contig_1_39003.9_Circ	#d80032	828
+SC1612_Contig_1_1166.61_Circ	#cfdbd5	NA
+SC1669_Contig_1_1483.31_Circ	#d80032	828
+SC0725_Contig_2_3001.64_Circ	#d80032	828
+SC0086_Contig_1_412.781_Circ	#d80032	828
+SC0087_Contig_1_344.855_Circ	#d80032	828
+SC0250_Contig_1_5239.02_Circ	#d80032	828
+SC0481_Contig_1_5130.27_Circ	#d80032	828
+SC0820_Contig_1_13127_Circ	#d80032	828
+SC1416_Contig_1_1799.37_Circ	#d80032	828
+SC1417_Contig_1_2335.7_Circ	#d80032	828
+SC0209_Contig_1_11986.1_Circ	#d80032	828
+SC0083_Contig_1_743.574_Circ	#FF00FF	1034
+SC1272_Contig_1_9549.44_Circ	#91e5f6	692
+SC0153_Contig_1_48.3484_Circ	#cfdbd5	NA
+SC0199_Contig_1_57.4932_Circ	#192a51	403
+SC1718_Contig_2_137.32_Circ	#d80032	828
+SC0733_Contig_1_356.027_Circ	#2c699a	42
+SC1596_Contig_1_126.651_Circ	#2c699a	42
+SC1141_Contig_1_355.593_Circ	#2c699a	42
+SC1096_Contig_1_142.013_Circ	#2c699a	42
+SC0206_Contig_1_207.085_Circ	#2c699a	42
+SC1097_Contig_1_235.515_Circ	#2c699a	42
+SC1204_Contig_1_267.883_Circ	#2c699a	42
+SC1606_Contig_1_295.584_Circ	#2c699a	42
+SC0336_Contig_1_146.763_Circ	#2c699a	42
+SC0339_Contig_1_113.237_Circ	#2c699a	42
+SC0955_Contig_1_120.809_Circ	#2c699a	42
+SC1438_Contig_1_187.293_Circ	#2c699a	42
+SC1671_Contig_1_106.489_Circ	#2c699a	42
+SC0204_Contig_1_272.897_Circ	#2c699a	42
+SC0240_Contig_1_221.364_Circ	#2c699a	42
+SC0242_Contig_1_247.185_Circ	#2c699a	42
+SC0244_Contig_1_222.781_Circ	#2c699a	42
+SC0321_Contig_1_142.494_Circ	#2c699a	42
+SC0707_Contig_1_296.578_Circ	#2c699a	42
+SC1613_Contig_1_224.829_Circ	#2c699a	42
+SC1615_Contig_1_254.251_Circ	#2c699a	42
+SC1668_Contig_1_189.039_Circ	#2c699a	42
+SC0201_Contig_1_205.978_Circ	#2c699a	42
+SC0437_Contig_1_147.123_Circ	#2c699a	42
+SC1134_Contig_1_305.364_Circ	#2c699a	42
+SC0436_Contig_1_133.121_Circ	#2c699a	42
+SC0860_Contig_1_537.39_Circ	#2c699a	42
+SC0893_Contig_1_233.133_Circ	#2c699a	42
+SC1627_Contig_1_271.276_Circ	#2c699a	42
+SC0255_Contig_1_197.262_Circ	#2c699a	42
+SC1347_Contig_2_402.165_Circ	#54478c	21
+SC1238_Contig_1_190.646_Circ	#54478c	21
+SC1131_Contig_1_168.997_Circ	#54478c	21
+SC0887_Contig_1_214.599_Circ	#192a51	403
+SC0275_Contig_1_95.0359_Circ	#f29e4c	206
+SC1546_Contig_1_227.961_Circ	#1a4301	257
+SC1595_Contig_1_82.5635_Circ	#b185db	354
+SC0732_Contig_2_265.881_Circ	#0db39e	48
+SC0849_Contig_1_273.334_Circ	#f26a8d	508
+SC0952_Contig_1_115.85_Circ	#54478c	21
+SC1548_Contig_1_191.935_Circ	#1a4301	257
+SC1315_Contig_1_172.535_Circ	#1a4301	257
+SC0173_Contig_1_238.691_Circ	#efea5a	61
+SC1260_Contig_1_329.834_Circ	#0db39e	48
+SC0388_Contig_2_118.586_Circ	#d80032	828
+SC0237_Contig_2_209.334_Circ	#83e377	52
+SC1597_Contig_1_166.608_Circ	#efea5a	61
+SC1013_Contig_1_103.391_Circ	#54478c	21
+SC1574_Contig_1_188.97_Circ	#54478c	21
+SC1281_Contig_1_544.344_Circ	#0db39e	48
+SC1593_Contig_1_89.94_Circ	#0db39e	48
+SC1591_Contig_1_143.343_Circ	#d80032	828
+SC0332_Contig_1_151.395_Circ	#efea5a	61
+SC1712_Contig_1_217.86_Circ	#54478c	21
+SC0211_Contig_1_164.543_Circ	#f26a8d	508
+SC0582_Contig_1_122.855_Circ	#2c699a	42
+SC1327_Contig_1_220.689_Circ	#54478c	21
+SC0217_Contig_1_211.088_Circ	#54478c	21
+SC0238_Contig_1_127.014_Circ	#54478c	21
+SC0811_Contig_1_556.434_Circ	#54478c	21
+SC1551_Contig_1_190.885_Circ	#54478c	21
+SC0327_Contig_1_85.1071_Circ	#2c699a	42
+SC0330_Contig_1_117.21_Circ	#2c699a	42
+SC0796_Contig_1_502.26_Circ	#54478c	21
+SC1474_Contig_1_154.597_Circ	#efea5a	61
+SC0897_Contig_1_263.378_Circ	#54478c	21
+SC1044_Contig_1_303.064_Circ	#0db39e	48
+SC1206_Contig_1_287.11_Circ	#54478c	21
+SC0266_Contig_1_674.74_Circ	#0db39e	48
+SC1486_Contig_1_201.182_Circ	#0db39e	48
+SC1452_Contig_1_136.753_Circ	#54478c	21
+SC0433_Contig_1_48.4969_Circ	#54478c	21
+SC0450_Contig_1_186.861_Circ	#f26a8d	508
+SC0490_Contig_1_100.343_Circ	#54478c	21
+SC1017_Contig_1_445.965_Circ	#efea5a	61
+SC1210_Contig_1_252.002_Circ	#54478c	21
+SC1211_Contig_1_220.596_Circ	#54478c	21
+SC0202_Contig_1_256.734_Circ	#0db39e	48
+SC0695_Contig_1_324.05_Circ	#54478c	21
+SC1043_Contig_1_288.835_Circ	#54478c	21
+SC1314_Contig_1_256.24_Circ	#54478c	21
+SC1588_Contig_1_113.077_Circ	#2c699a	42
+SC1586_Contig_1_153.278_Circ	#2c699a	42
+SC1587_Contig_1_119.666_Circ	#2c699a	42
+SC0126_Contig_1_91.755_Circ	#2c699a	42
+SC0267_Contig_1_176.244_Circ	#54478c	21
+SC0317_Contig_1_125.517_Circ	#0db39e	48
+SC1625_Contig_1_298.264_Circ	#192a51	403
+SC0803_Contig_1_472.018_Circ	#54478c	21
+SC0951_Contig_1_254.545_Circ	#54478c	21
+SC0103_Contig_1_179.388_Circ	#efea5a	61
+SC0560_Contig_1_68.2659_Circ	#efea5a	61
+SC0474_Contig_1_109.991_Circ	#54478c	21
+SC0841_Contig_1_91.0205_Circ	#2c699a	42
+SC0880_Contig_1_234.628_Circ	#0db39e	48
+SC0813_Contig_1_380.144_Circ	#2c699a	42
+SC1472_Contig_1_157.484_Circ	#0db39e	48
+SC0554_Contig_1_90.6268_Circ	#2c699a	42
+SC0665_Contig_1_376.613_Circ	#54478c	21
+SC0210_Contig_1_263.781_Circ	#efea5a	61
+SC1161_Contig_1_368.061_Circ	#efea5a	61
+SC1470_Contig_1_137.546_Circ	#54478c	21
+SC0482_Contig_1_115.304_Circ	#2c699a	42
+SC0987_Contig_1_55.8623_Circ	#d80032	828
+SC1718_Contig_1_133.324_Circ	#d80032	828
+SC1292_Contig_1_250.739_Circ	#0db39e	48
+SC1318_Contig_1_222.424_Circ	#0db39e	48
+SC1320_Contig_1_119.905_Circ	#0db39e	48
+SC1386_Contig_1_146.736_Circ	#54478c	21
+

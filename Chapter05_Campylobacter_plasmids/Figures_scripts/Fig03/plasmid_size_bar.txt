@@ -1,0 +1,255 @@
+DATASET_SIMPLEBAR
+#In simple bar charts, each ID is associated to a single numeric value which is displayed as a bar outside the tree.
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file.
+#SEPARATOR TAB
+#SEPARATOR SPACE
+SEPARATOR COMMA
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,Plasmid size
+
+#dataset color (can be changed later)
+COLOR,#86b0b6
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+#dataset scale: you can simply set the values where the scale will be drawn
+#DATASET_SCALE,200,300,400,500
+
+#or you can specify value, label, color, width, style and label size factor for each scale line (dash separated, format: VALUE-LABEL-COLOR-WIDTH-DASHED-LABEL_SCALE_FACTOR))
+#DATASET_SCALE,2000-2k line-#0000ff-5-1-1,10000-line at 10k-#ff0000-1-0-2,20000-3rd line-#00ff00-5-1-1
+
+#Each dataset can have a legend, which is defined using LEGEND_XXX fields below
+#For each row in the legend, there should be one shape, color and label.
+#Optionally, you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning, do NOT define these values
+#Optionally, shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape, you can define a scaling factor between 0 and 1.
+#To order legend entries horizontally instead of vertically, set LEGEND_HORIZONTAL to 1
+#Shape should be a number between 1 and 6, or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+#LEGEND_TITLE,Plasmid Size
+#LEGEND_SCALE,1
+#LEGEND_POSITION_X,100
+#LEGEND_POSITION_Y,100
+#LEGEND_HORIZONTAL,0
+#LEGEND_SHAPES,1,1,1,1,1,1,1,1
+#LEGEND_COLORS,#ffe6e6,#ffcccc,#ff9999,#ff6666,#ff3333,#ff0000,#e60000,#cc0000
+#LEGEND_LABELS,2K-3K,3K-4K,4K-5K,5K-6K,6K-7K,20K-30K,30K-40K,40K-50K
+#LEGEND_SHAPE_SCALES,1,1,0.5
+
+
+#maximum width
+WIDTH,300
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+MARGIN,50
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL,0
+
+#show dashed lines between leaf labels and the dataset
+#DASHED_LINES,1
+
+#bar height factor; Default bar height will be slightly less than the available space between leaves, but you can set a multiplication factor here to increase/decrease it (values from 0 to 1 will decrease it, values above 1 will increase it)
+#HEIGHT_FACTOR,1
+
+#Display individual values above the bars
+SHOW_VALUE,1
+
+#Display custom bar labels, when defined. The label can be specified after the numeric value in the DATA section below.
+SHOW_LABELS,1
+
+#Position of the value or custom label, relative to the bar (when SHOW_VALUE or SHOW_LABELS are set to 1)
+#can be one of: outside-right, outside-left, left, center, right
+LABEL_POSITION,outside-right
+
+#shift all labels horizontally and/or vertically
+#LABEL_SHIFT_X,0
+#LABEL_SHIFT_Y,0
+
+#add a colored outline to the label font; useful when displaying labels over similarly colored boxes (e.g. black font on a dark box)
+#LABEL_OUTLINE_WIDTH,0
+#LABEL_OUTLINE_COLOR,#ffffff
+
+#multiply the size of all labels by this factor
+#LABEL_SIZE_FACTOR,0
+
+
+#Bars are aligned to the node lines by default. Using BAR_SHIFT, you can move them all up/down by a fixed amount
+#BAR_SHIFT,0
+
+#BAR_ZERO specifies which dataset value will be used as a starting point for drawing the bars. Dataset values smaller than BAR_ZERO will be displayed to the left (possibly overlapping the tree, unless MARGIN is increased)
+BAR_ZERO,300
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the bars
+#BORDER_WIDTH,0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR,#0000ff
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+#only numeric values are required for each ID, custom labels can be optionally provided as the second field (shown when SHOW_LABELS is set to 1) 
+DATA
+#ID1,value1,label1
+#ID2,value2,label2
+#9606,10000,Homo sapiens value
+#LEAF1|LEAF2,11000
+
+SC1065_Contig_1_5516.09_Circ,339,2k-3k
+SC0941_Contig_1_10315.2_Circ,339,2k-3k
+SC0987_Contig_2_5043.07_Circ,339,2k-3k
+SC1689_Contig_1_5256.73_Circ,343,2k-3k
+SC0391_Contig_1_6602.5_Circ,359,3k-4k
+SC0470_Contig_1_3146.75_Circ,361,4k-5k
+SC0476_Contig_1_2457.8_Circ,361,4k-5k
+SC1694_Contig_1_6445.4_Circ,361,4k-5k
+SC1705_Contig_1_5857.32_Circ,361,4k-5k
+SC0435_Contig_1_8068.69_Circ,361,4k-5k
+SC0438_Contig_1_17961.6_Circ,361,4k-5k
+SC0585_Contig_1_4448.09_Circ,361,4k-5k
+SC0850_Contig_1_25745.4_Circ,361,4k-5k
+SC0851_Contig_1_39003.9_Circ,361,4k-5k
+SC1612_Contig_1_1166.61_Circ,361,4k-5k
+SC1669_Contig_1_1483.31_Circ,361,4k-5k
+SC0725_Contig_2_3001.64_Circ,361,4k-5k
+SC0086_Contig_1_412.781_Circ,361,4k-5k
+SC0087_Contig_1_344.855_Circ,361,4k-5k
+SC0250_Contig_1_5239.02_Circ,361,4k-5k
+SC0481_Contig_1_5130.27_Circ,361,4k-5k
+SC0820_Contig_1_13127_Circ,361,4k-5k
+SC1416_Contig_1_1799.37_Circ,361,4k-5k
+SC1417_Contig_1_2335.7_Circ,361,4k-5k
+SC0209_Contig_1_11986.1_Circ,361,4k-5k
+SC0083_Contig_1_743.574_Circ,365,4k-5k
+SC1272_Contig_1_9549.44_Circ,373,5k-6k
+SC0153_Contig_1_48.3484_Circ,381,6k-7k
+SC0199_Contig_1_57.4932_Circ,381,6k-7k
+SC1718_Contig_2_137.32_Circ,441,20k-30k
+SC0733_Contig_1_356.027_Circ,442,20k-30k
+SC1596_Contig_1_126.651_Circ,442,20k-30k
+SC1141_Contig_1_355.593_Circ,442,20k-30k
+SC1096_Contig_1_142.013_Circ,442,20k-30k
+SC0206_Contig_1_207.085_Circ,442,20k-30k
+SC1097_Contig_1_235.515_Circ,442,20k-30k
+SC1204_Contig_1_267.883_Circ,442,20k-30k
+SC1606_Contig_1_295.584_Circ,442,20k-30k
+SC0336_Contig_1_146.763_Circ,442,20k-30k
+SC0339_Contig_1_113.237_Circ,442,20k-30k
+SC0955_Contig_1_120.809_Circ,442,20k-30k
+SC1438_Contig_1_187.293_Circ,442,20k-30k
+SC1671_Contig_1_106.489_Circ,442,20k-30k
+SC0204_Contig_1_272.897_Circ,442,20k-30k
+SC0240_Contig_1_221.364_Circ,442,20k-30k
+SC0242_Contig_1_247.185_Circ,442,20k-30k
+SC0244_Contig_1_222.781_Circ,442,20k-30k
+SC0321_Contig_1_142.494_Circ,442,20k-30k
+SC0707_Contig_1_296.578_Circ,442,20k-30k
+SC1613_Contig_1_224.829_Circ,442,20k-30k
+SC1615_Contig_1_254.251_Circ,442,20k-30k
+SC1668_Contig_1_189.039_Circ,442,20k-30k
+SC0201_Contig_1_205.978_Circ,442,20k-30k
+SC0437_Contig_1_147.123_Circ,442,20k-30k
+SC1134_Contig_1_305.364_Circ,442,20k-30k
+SC0436_Contig_1_133.121_Circ,442,20k-30k
+SC0860_Contig_1_537.39_Circ,442,20k-30k
+SC0893_Contig_1_233.133_Circ,442,20k-30k
+SC1627_Contig_1_271.276_Circ,442,20k-30k
+SC0255_Contig_1_197.262_Circ,442,20k-30k
+SC1347_Contig_2_402.165_Circ,443,20k-30k
+SC1238_Contig_1_190.646_Circ,443,20k-30k
+SC1131_Contig_1_168.997_Circ,444,20k-30k
+SC0887_Contig_1_214.599_Circ,444,20k-30k
+SC0275_Contig_1_95.0359_Circ,444,20k-30k
+SC1546_Contig_1_227.961_Circ,444,20k-30k
+SC1595_Contig_1_82.5635_Circ,444,20k-30k
+SC0732_Contig_2_265.881_Circ,444,20k-30k
+SC0849_Contig_1_273.334_Circ,444,20k-30k
+SC0952_Contig_1_115.85_Circ,444,20k-30k
+SC1548_Contig_1_191.935_Circ,444,20k-30k
+SC1315_Contig_1_172.535_Circ,444,20k-30k
+SC0173_Contig_1_238.691_Circ,444,20k-30k
+SC1260_Contig_1_329.834_Circ,444,20k-30k
+SC0388_Contig_2_118.586_Circ,444,20k-30k
+SC0237_Contig_2_209.334_Circ,444,20k-30k
+SC1597_Contig_1_166.608_Circ,444,20k-30k
+SC1013_Contig_1_103.391_Circ,444,20k-30k
+SC1574_Contig_1_188.97_Circ,444,20k-30k
+SC1281_Contig_1_544.344_Circ,444,20k-30k
+SC1593_Contig_1_89.94_Circ,444,20k-30k
+SC1591_Contig_1_143.343_Circ,445,20k-30k
+SC0332_Contig_1_151.395_Circ,445,20k-30k
+SC1712_Contig_1_217.86_Circ,445,20k-30k
+SC0211_Contig_1_164.543_Circ,445,20k-30k
+SC0582_Contig_1_122.855_Circ,445,20k-30k
+SC1327_Contig_1_220.689_Circ,445,20k-30k
+SC0217_Contig_1_211.088_Circ,445,20k-30k
+SC0238_Contig_1_127.014_Circ,445,20k-30k
+SC0811_Contig_1_556.434_Circ,445,20k-30k
+SC1551_Contig_1_190.885_Circ,445,20k-30k
+SC0327_Contig_1_85.1071_Circ,445,20k-30k
+SC0330_Contig_1_117.21_Circ,445,20k-30k
+SC0796_Contig_1_502.26_Circ,445,20k-30k
+SC1474_Contig_1_154.597_Circ,445,20k-30k
+SC0897_Contig_1_263.378_Circ,445,20k-30k
+SC1044_Contig_1_303.064_Circ,445,20k-30k
+SC1206_Contig_1_287.11_Circ,445,20k-30k
+SC0266_Contig_1_674.74_Circ,445,20k-30k
+SC1486_Contig_1_201.182_Circ,445,20k-30k
+SC1452_Contig_1_136.753_Circ,445,20k-30k
+SC0433_Contig_1_48.4969_Circ,445,20k-30k
+SC0450_Contig_1_186.861_Circ,445,20k-30k
+SC0490_Contig_1_100.343_Circ,445,20k-30k
+SC1017_Contig_1_445.965_Circ,445,20k-30k
+SC1210_Contig_1_252.002_Circ,445,20k-30k
+SC1211_Contig_1_220.596_Circ,445,20k-30k
+SC0202_Contig_1_256.734_Circ,446,20k-30k
+SC0695_Contig_1_324.05_Circ,446,20k-30k
+SC1043_Contig_1_288.835_Circ,446,20k-30k
+SC1314_Contig_1_256.24_Circ,446,20k-30k
+SC1588_Contig_1_113.077_Circ,446,20k-30k
+SC1586_Contig_1_153.278_Circ,446,20k-30k
+SC1587_Contig_1_119.666_Circ,446,20k-30k
+SC0126_Contig_1_91.755_Circ,446,20k-30k
+SC0267_Contig_1_176.244_Circ,446,20k-30k
+SC0317_Contig_1_125.517_Circ,446,20k-30k
+SC1625_Contig_1_298.264_Circ,447,20k-30k
+SC0803_Contig_1_472.018_Circ,447,20k-30k
+SC0951_Contig_1_254.545_Circ,448,20k-30k
+SC0103_Contig_1_179.388_Circ,448,30k-40k
+SC0560_Contig_1_68.2659_Circ,448,30k-40k
+SC0474_Contig_1_109.991_Circ,448,30k-40k
+SC0841_Contig_1_91.0205_Circ,448,30k-40k
+SC0880_Contig_1_234.628_Circ,448,30k-40k
+SC0813_Contig_1_380.144_Circ,448,30k-40k
+SC1472_Contig_1_157.484_Circ,448,30k-40k
+SC0554_Contig_1_90.6268_Circ,448,30k-40k
+SC0665_Contig_1_376.613_Circ,448,30k-40k
+SC0210_Contig_1_263.781_Circ,448,30k-40k
+SC1161_Contig_1_368.061_Circ,448,30k-40k
+SC1470_Contig_1_137.546_Circ,448,30k-40k
+SC0482_Contig_1_115.304_Circ,448,30k-40k
+SC0987_Contig_1_55.8623_Circ,456,30k-40k
+SC1718_Contig_1_133.324_Circ,459,30k-40k
+SC1292_Contig_1_250.739_Circ,466,40k-50k
+SC1318_Contig_1_222.424_Circ,466,40k-50k
+SC1320_Contig_1_119.905_Circ,466,40k-50k
+SC1386_Contig_1_146.736_Circ,466,40k-50k
