@@ -1,4 +1,4 @@
-### Description
+## Description
 
 Figure 3 - Dendrogram based on MashTree results comparing  the sequences of 139 circularised plasmids (CPS). The coloured ranges show the 15 clusters identified according to their dissimilarity (Mash distance ≥ 0.009 and ≤ 90% of genes shared). The labels show the species and ST of each isolate. The filled triangles in the first ring indicate the source of each isolate. The plasmid markers and CC  are represented by the inner and outer colour strips, respectively. The red stars indicate the representative isolates selected for nanopore sequencing. The plasmid lengths (bp) are depicted in the bar charts in the last ring. The dendrogram was visualised and annotated using iTOL.  
 
@@ -222,4 +222,5 @@ Files to annotate the tree in iTOL:
 [Selected for Nanopore](./star_selected.txt)  
 [Contig length](./plasmid_size_bar.txt)  
 
+Final tree annotated:  
 [Annotated tree](./Fig02_MashTree.pdf)
