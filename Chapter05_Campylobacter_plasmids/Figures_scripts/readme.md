@@ -10,9 +10,9 @@
 
 [## Figure 05](./Fig05)
 
-## Figure 06
+[## Figure 06](./Fig06)
 
-## Figure 07
+[## Figure 07](./Fig07)
 
 ## Figure 08
 
