@@ -1,8 +1,8 @@
 # Figures scripts for Chapter 05
 
-## Figure 01
+[## Figure 01](./Fig01)
 
-## Figure 02
+[## Figure 02](./Fig02)
 
 ## Figure 03
 
