@@ -2,26 +2,28 @@
 # Structure of this folder
 
 # Appendix 01
-Assembly comparison 
+Assembly comparison
 # Appendix 02
-Matrix generated using Roary and Mash 
+Circlator fix starts genes
 # Appendix 03
-pTet plasmid map generated using the Illumina data 
+Matrix generated using Roary and Mash
 # Appendix 04
-Metadata Illumina genomes 
+pTet plasmid map generated using the Illumina data
 # Appendix 05
-Quality metrics of the long reads assembly using
+Metadata Illumina genomes
 # Appendix 06
-BaNDAGE OUTPUT 
+Quality metrics of the long reads assembly using
 # Appendix 07
-Proksee maps of medium sized plasmids 
+BaNDAGE OUTPUT
 # Appendix 08
-Metadata plasmids detected with Nanopore + Illumina
+Proksee maps of medium sized plasmids
 # Appendix 09
-Proksee maps and MAUVE alignments from CP4, CP5, and CP10
+Metadata plasmids detected with Nanopore + Illumina
 # Appendix 10
-Clinker matrix of CP4, CP5, and CP10
+Proksee maps and MAUVE alignments from CP4, CP5, and CP10
 # Appendix 11
-NCBI hit of global comparison
+Clinker matrix of CP4, CP5, and CP10
 # Appendix 12
+NCBI hit of global comparison
+# Appendix 13
 NCBI Clinker matrices
