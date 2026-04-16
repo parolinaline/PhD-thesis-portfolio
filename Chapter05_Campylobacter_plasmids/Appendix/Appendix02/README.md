@@ -1,1 +1,1 @@
-just testing
+The table shows the genes which all sequences were rotated to a consistent start position using Circlator fixstart, anchored on a type-specific conserved gene, such that the same gene was used to fix the start position of sequences within each comparison.
