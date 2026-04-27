@@ -18,8 +18,8 @@ The starting point for all temporal analyses was the **recombination-filtered co
 
 | Dataset | Isolates | SNP sites |
 |---|---|---|
-| *S.* Bovismorbificans ST377 | ~340 | 24,410 |
-| *S.* Give ST654 | ~77 | 44,498 |
+| *S.* Bovismorbificans ST377 | 340 | 24,410 |
+| *S.* Give ST654 | 55 | 44,498 |
 
 SNP calling was performed using **Clair3** on Oxford Nanopore long reads, with `minimap2` for reference alignment and `BCFtools` for VCF processing. Gubbins was then used to mask recombination regions and produce the final variant-only alignment used as input here.
 
@@ -67,6 +67,22 @@ Both ST377 and ST654 showed positive temporal signal in TempEst, supporting the 
 
 ![TempEst residuals ST377](./tempest/bovis4.png)
 *Figure: Residuals for S. Bovismorbificans ST377.*
+
+**ST654 — Residuals (TempEst):**
+
+![TempEst residuals ST654](./tempest/give4.png)
+*Figure: Residuals for S. Give ST654.*
+
+**ST377 — Node density (TempEst):**
+
+![TempEst residuals ST377](./tempest/bovis5.png)
+*Figure: Residuals for S. Bovismorbificans ST377.*
+
+**ST654 — Node density (TempEst):**
+
+![TempEst residuals ST654](./tempest/give5.png)
+*Figure: Residuals for S. Give ST654.*
+
 ---
 
 ### 2b. BactDating

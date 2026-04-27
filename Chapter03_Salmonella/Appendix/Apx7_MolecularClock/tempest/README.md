@@ -7,8 +7,6 @@ This page shows the TempEst results for two *Salmonella* serovars as part of my 
 
 ## 1. Temporal Signal Assessment with TempEst
 
-### 1a. TempEst
-
 **TempEst v1.5.3** was used to assess whether there was a clock-like signal in each dataset before committing to Bayesian analysis.
 
 **Steps:**
@@ -40,6 +38,22 @@ Both ST377 and ST654 showed positive temporal signal in TempEst, supporting the 
 
 ![TempEst residuals ST377](./tempest/bovis4.png)
 *Figure: Residuals for S. Bovismorbificans ST377.*
+
+**ST654 — Residuals (TempEst):**
+
+![TempEst residuals ST654](./tempest/give4.png)
+*Figure: Residuals for S. Give ST654.*
+
+**ST377 — Node density (TempEst):**
+
+![TempEst residuals ST377](./tempest/bovis5.png)
+*Figure: Residuals for S. Bovismorbificans ST377.*
+
+**ST654 — Node density (TempEst):**
+
+![TempEst residuals ST654](./tempest/give5.png)
+*Figure: Residuals for S. Give ST654.*
+
 ---
 
 
