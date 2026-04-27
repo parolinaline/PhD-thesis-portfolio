@@ -53,7 +53,7 @@ Both ST377 and ST654 showed positive temporal signal in TempEst, supporting the 
 
 **ST377 — Root-to-tip regression (TempEst):**
 
-![TempEst root-to-tip plot ST377](figures/tempest_ST377.png)
+![TempEst root-to-tip plot ST377](./tempest/bovis3.png)
 *Figure: Root-to-tip regression for S. Bovismorbificans ST377. Positive slope and R² indicate temporal signal.*
 
 **ST654 — Root-to-tip regression (TempEst):**
@@ -63,6 +63,10 @@ Both ST377 and ST654 showed positive temporal signal in TempEst, supporting the 
 
 > **Note:** An early test for ST377 that included ~70 low-depth isolates (recovered via Clair3 after Snippy failed) produced a negative slope and a TMRCA projected to 2047 — a red flag. Those isolates were near-clonal to recent isolates but spanned the full date range, adding temporal noise without genetic diversity. They were filtered prior to final analyses.
 
+**ST377 — Residuals (TempEst):**
+
+![TempEst residuals ST377](./tempest/bovis4.png)
+*Figure: Residuals for S. Bovismorbificans ST377.*
 ---
 
 ### 2b. BactDating
