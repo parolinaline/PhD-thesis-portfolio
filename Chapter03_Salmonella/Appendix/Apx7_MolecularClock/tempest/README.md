@@ -38,7 +38,7 @@ Both ST377 and ST654 showed positive temporal signal in TempEst, supporting the 
 
 **ST377 — Residuals (TempEst):**
 
-![TempEst residuals ST377](./tempest/bovis4.png)
+##![TempEst residuals ST377](./tempest/bovis4.png)
 *Figure: Residuals for S. Bovismorbificans ST377.*
 ---
 
