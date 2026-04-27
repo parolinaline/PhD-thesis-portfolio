@@ -150,25 +150,26 @@ Both ST377 and ST654 passed this test.
 
 **ST377 — BactDating results:**
 
-![BactDating root-to-tip ST377](figures/bactdating_roottotip_ST377.png)
+![BactDating root-to-tip ST377](bactdating/bovis_root2tip.png)
 *Figure: BactDating root-to-tip regression for ST377.*
 
-![BactDating dated tree ST377](figures/bactdating_tree_ST377.png)
-*Figure: BactDating dated phylogeny for ST377, with 95% credible intervals on node ages.*
-
-![BactDating MCMC trace ST377](figures/bactdating_trace_ST377.png)
+![BactDating dated tree ST377](bactdating/bovis_mcmc.png)
 *Figure: MCMC trace plot for the ST377 temporal model, showing convergence.*
+
+![BactDating MCMC trace ST377](bactdating/bovis_nullmodel.png)
+*Figure: MCMC trace plot for the ST377 null model (all dates set to 2011), showing no convergence.*
 
 **ST654 — BactDating results:**
 
-![BactDating root-to-tip ST654](figures/bactdating_roottotip_ST654.png)
+![BactDating root-to-tip ST377](bactdating/give_root2tip.png)
 *Figure: BactDating root-to-tip regression for ST654.*
 
-![BactDating dated tree ST654](figures/bactdating_tree_ST654.png)
-*Figure: BactDating dated phylogeny for ST654, with 95% credible intervals on node ages.*
-
-![BactDating MCMC trace ST654](figures/bactdating_trace_ST654.png)
+![BactDating dated tree ST377](bactdating/give_mcmc.png)
 *Figure: MCMC trace plot for the ST654 temporal model, showing convergence.*
+
+![BactDating MCMC trace ST377](bactdating/give_nullmodel.png)
+*Figure: MCMC trace plot for the ST654 null model (all dates set to 2011), showing no convergence.*
+
 
 ---
 
