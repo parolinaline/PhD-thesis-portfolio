@@ -41,15 +41,42 @@ These ML trees (with tip dates in the name, format `isolate_name|YYYY-MM-DD`) we
 **Steps:**
 
 1. Load the IQ-TREE ML tree into TempEst.
-2. Import tip dates — dates were parsed directly from tip names using the `|YYYY-MM-DD` delimiter.
-3. Use the **"best-fitting root"** option to find the root position that maximises the R² of the root-to-tip regression.
-4. Inspect the root-to-tip vs. sampling date scatter plot.
+2. Parse dates
+3. Select "Defined by a prefix and its order"
+- Order: Second
+- Prefix: |
+4. Parse as a calendar date:
+- Date format: YYYY-MM-DD
+5. Use the **"best-fitting root"** option to find the root position that maximises the R² of the root-to-tip regression.
+6. Inspect the root-to-tip vs. sampling date scatter plot.
 
 **What to look for:**
 - A positive slope (sequences accumulate substitutions over time)
 - R² > 0.3 as a rough threshold for sufficient signal
 
 Both ST377 and ST654 showed positive temporal signal in TempEst, supporting the use of molecular clock models.
+
+#### Results
+
+##### **Interpreting TempEst using an example**
+
+| Dated Tips | Values |
+|------|--------|
+|Date range|17.9945|
+|Slope(rate)|0.8806|
+|X-Intercept (TMRCA)|1947.5691|
+|Correlation Coefficient|0.4854|
+|R squared| 0.2356|
+|Residual Mean Squared|18.8765|
+
+- Date range: This is the temporal span covered by my samples — the difference between the oldest and most recent isolate collection dates.
+- Slope / Rate (0.8806): This represents the estimated substitution rate, expressed as substitutions per site per year. This is a preliminary rate estimate from the linear regression.
+- X-Intercept / TMRCA (1947.5691): The estimated time to the most recent common ancestor — where the regression line crosses zero on the y-axis (root-to-tip distance = 0). This is a rough estimate.
+- Correlation Coefficient (0.4854): This measures the strength and direction of the linear relationship between sampling date and root-to-tip genetic distance. Values range from -1 to +1. My value of ~0.49 indicates a moderate positive correlation — genetic distance increases with time, as expected under a molecular clock.
+- R squared (0.2356): The proportion of variance in root-to-tip distance explained by sampling time. My value indicates that ~24% of the variation is explained by time. The remaining variation comes from rate heterogeneity among lineages or other factors. For bacterial datasets, values between 0.2–0.5 are quite common.
+- Residual Mean Squared (18.8765): This quantifies the average squared deviation of data points from the regression line — essentially measuring the scatter around the best-fit line. Lower values indicate better fit.
+
+##### **Looking at TempEst graphs**
 
 **ST377 — Root-to-tip regression (TempEst):**
 
@@ -244,6 +271,19 @@ Before running the final BEAST2 analysis, **path sampling (stepping-stone)** was
    - Chain length per step: 20,000,000–30,000,000
    - Pre-burnin: 1,000,000
    - Burnin: 50%
+
+**Editing the xml file**
+After saving te xml file we should add the constant site weights editing the file in a text editor:
+The xml file will be empty, like this:
+</data>
+Then it should look like this:
+    </data>
+	<data id="ST377_filtered_masked_Gubbins" spec="FilteredAlignment" filter="-" data="@Original-ST377_filtered_masked_Gubbins" constantSiteWeights="306106393 336144977 335779075 306128624"/> 
+The id line (first line), should also be edited:
+from:
+<data id="ST377_filtered_masked_Gubbins"
+to:
+<data id="Original-ST377_filtered_masked_Gubbins"
 
 Each model (strict + relaxed) was submitted as a separate BEAST2 run on NeSI:
 
