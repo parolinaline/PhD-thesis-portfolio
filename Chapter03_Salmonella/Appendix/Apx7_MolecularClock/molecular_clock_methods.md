@@ -18,8 +18,8 @@ The starting point for all temporal analyses was the **recombination-filtered co
 
 | Dataset | Isolates | SNP sites |
 |---|---|---|
-| *S.* Bovismorbificans ST377 | ~340 | ~5,121 |
-| *S.* Give ST654 | ~77 | variable |
+| *S.* Bovismorbificans ST377 | ~340 | 24,410 |
+| *S.* Give ST654 | ~77 | 44,498 |
 
 SNP calling was performed using **Clair3** on Oxford Nanopore long reads, with `minimap2` for reference alignment and `BCFtools` for VCF processing. Gubbins was then used to mask recombination regions and produce the final variant-only alignment used as input here.
 
