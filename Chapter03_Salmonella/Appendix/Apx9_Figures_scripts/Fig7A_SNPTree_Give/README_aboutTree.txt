@@ -1,0 +1,1 @@
+This is the latest version of the SNP tree, where I excluded isolates SGV027, SGV029, and SGV030 because their sequence depth was below 30X and I also excluded SGV074 from the analyses because according to SeqSero and Sistr this isolate is a Salmonella Uganda

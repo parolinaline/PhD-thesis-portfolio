@@ -1,0 +1,99 @@
+LABELS
+#use this template to change the leaf labels, or define/change the internal node names (displayed in mouseover popups)
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+
+SEPARATOR TAB
+#SEPARATOR SPACE
+#SEPARATOR COMMA
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+#NODE_ID,LABEL
+
+#Examples
+#defined a name for an internal node
+#9606|9031	Metazoa
+#change the label for leaf node 9606
+SGV002	ST516
+SGV003	ST516
+SGV004	ST654
+SGV005	ST516
+SGV006	ST516
+SGV007	ST516
+SGV008	ST516
+SGV009	ST516
+SGV010	ST516
+SGV011	ST516
+SGV012	ST516
+SGV013	ST516
+SGV014	ST516
+SGV016	ST516
+SGV017	ST516
+SGV018	ST2227
+SGV019	ST516
+SGV020	ST516
+SGV021	ST654
+SGV022	ST654
+SGV023	ST654
+SGV025	ST654
+SGV026	ST654
+SGV028	ST654
+SGV031	ST654
+SGV032	ST654
+SGV033	ST654
+SGV034	ST654
+SGV035	ST654
+SGV036	ST654
+SGV037	ST654
+SGV038	ST654
+SGV039	ST654
+SGV040	ST654
+SGV041	ST654
+SGV042	ST654
+SGV043	ST654
+SGV044	ST654
+SGV045	ST654
+SGV046	ST654
+SGV047	ST654
+SGV048	ST654
+SGV049	ST654
+SGV050	ST654
+SGV051	ST654
+SGV052	ST654
+SGV053	ST654
+SGV054	ST654
+SGV055	ST654
+SGV056	ST654
+SGV057	ST654
+SGV058	ST654
+SGV059	ST654
+SGV060	ST654
+SGV061	ST654
+SGV062	ST654
+SGV063	ST654
+SGV064	ST654
+SGV065	ST654
+SGV066	ST654
+SGV067	ST654
+SGV068	ST654
+SGV069	ST654
+SGV070	ST654
+SGV071	ST654
+SGV072	ST654
+SGV073	ST654
+SGV075	ST654
+SGV077	ST654
+SGV078	ST654
+SGV079	ST654
+SGV080	ST654
+SGV081	STunknown
+SGV082	STunknown

@@ -1,0 +1,449 @@
+DATASET_COLORSTRIP
+#In colored strip datasets, each ID is associated to a color box/strip and can have an optional label. Color can be specified in hexadecimal, RGB or RGBA notation. When using RGB or RGBA notation, you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+
+SEPARATOR TAB
+#SEPARATOR COMMA
+#SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+
+DATASET_LABEL	Source
+FIELD_LABELS	Source
+
+
+#dataset color (can be changed later)
+COLOR	#192a51
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1, branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color, it will be colored the same, ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES	0
+
+#each dataset can have a legend, which is defined below
+#for each row in the legend, there should be one shape, color and label
+#shape should be a number between 1 and 5:
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+
+LEGEND_TITLE	Source								
+LEGEND_SHAPES	1	1	1	1	1	1	1	1	1
+LEGEND_COLORS	#FF005D	#3208C1	#07F1FF	#004D40	#7733D6	#FF00DB	#1AFF9C	#FF4C00	#EAE600
+LEGEND_LABELS	Human	Bovine	Porcine	Equine	Canine	Feline	Others	Ovine	Avian
+
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#width of the colored strip
+#STRIP_WIDTH 25
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN 0
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the color strip
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+SBV001_plate05	#FF005D	Human
+SBV002_plate01	#FF005D	Human
+SBV003_plate01	#FF005D	Human
+SBV004_plate01	#FF005D	Human
+SBV005_plate01	#FF005D	Human
+Reference	#FF005D	Human
+SBV006_plate01	#FF005D	Human
+SBV007_plate01	#3208C1	Bovine
+SBV008_plate01	#FF005D	Human
+SBV009_plate01	#FF005D	Human
+SBV010_plate01	#07F1FF	Porcine
+SBV011_plate01	#FF005D	Human
+SBV012_plate01	#FF005D	Human
+SBV013_plate01	#FF005D	Human
+SBV014_plate01	#FF005D	Human
+SBV015_plate01	#FF005D	Human
+SBV016_plate01	#FF005D	Human
+SBV017_plate01	#FF005D	Human
+SBV018_plate01	#FF005D	Human
+SBV019_plate01	#3208C1	Bovine
+SBV020_plate01	#FF005D	Human
+SBV021_plate01	#FF005D	Human
+SBV022_plate01	#FF005D	Human
+SBV023_plate01	#3208C1	Bovine
+SBV024_plate01	#004D40	Equine
+SBV025_plate01	#3208C1	Bovine
+SBV025_plate01	#3208C1	Bovine
+SBV026_plate01	#FF005D	Human
+SBV027_plate01	#FF005D	Human
+SBV028_plate01	#FF005D	Human
+SBV029_plate01	#3208C1	Bovine
+SBV030_plate01	#FF005D	Human
+SBV031_plate01	#FF005D	Human
+SBV032_plate01	#7733D6	Canine
+SBV033_plate01	#FF00DB	Feline
+SBV035_plate01	#FF005D	Human
+SBV036_plate01	#FF005D	Human
+SBV037_plate01	#FF005D	Human
+SBV038_plate01	#FF005D	Human
+SBV039_plate01	#FF005D	Human
+SBV040_plate03	#FF005D	Human
+SBV041_plate01	#FF005D	Human
+SBV042_plate01	#FF005D	Human
+SBV043_plate01	#3208C1	Bovine
+SBV044_plate01	#3208C1	Bovine
+SBV045_plate01	#3208C1	Bovine
+SBV046_plate01	#3208C1	Bovine
+SBV047_plate01	#3208C1	Bovine
+SBV048_plate01	#3208C1	Bovine
+SBV049_plate01	#3208C1	Bovine
+SBV050_plate01	#3208C1	Bovine
+SBV051_plate01	#3208C1	Bovine
+SBV052_plate01	#3208C1	Bovine
+SBV053_plate01	#1AFF9C	Others
+SBV054_plate01	#3208C1	Bovine
+SBV055_plate01	#3208C1	Bovine
+SBV056_plate01	#3208C1	Bovine
+SBV057_plate01	#7733D6	Canine
+SBV058_plate01	#3208C1	Bovine
+SBV059_plate01	#3208C1	Bovine
+SBV060_plate01	#3208C1	Bovine
+SBV061_plate01	#3208C1	Bovine
+SBV062_plate01	#3208C1	Bovine
+SBV063_plate01	#FF00DB	Feline
+SBV064_plate01	#3208C1	Bovine
+SBV065_plate03	#3208C1	Bovine
+SBV066_plate01	#3208C1	Bovine
+SBV067_plate01	#3208C1	Bovine
+SBV068_plate01	#3208C1	Bovine
+SBV069_plate01	#3208C1	Bovine
+SBV070_plate01	#3208C1	Bovine
+SBV071_plate01	#3208C1	Bovine
+SBV072_plate02	#FF005D	Human
+SBV073_plate03	#FF005D	Human
+SBV074_plate03	#FF005D	Human
+SBV075_plate02	#FF005D	Human
+SBV076_plate02	#FF005D	Human
+SBV077_plate02	#FF005D	Human
+SBV078_plate02	#FF005D	Human
+SBV079_plate02	#FF005D	Human
+SBV080_plate02	#FF005D	Human
+SBV081_plate02	#FF005D	Human
+SBV082_plate02	#FF005D	Human
+SBV083_plate02	#FF005D	Human
+SBV084_plate02	#3208C1	Bovine
+SBV085_plate03	#3208C1	Bovine
+SBV086_plate02	#FF4C00	Ovine
+SBV087_plate02	#FF00DB	Feline
+SBV088_plate02	#3208C1	Bovine
+SBV089_plate02	#3208C1	Bovine
+SBV090_plate02	#3208C1	Bovine
+SBV091_plate02	#3208C1	Bovine
+SBV092_plate02	#3208C1	Bovine
+SBV093_plate02	#7733D6	Canine
+SBV094_plate02	#3208C1	Bovine
+SBV095_plate02	#3208C1	Bovine
+SBV096_plate02	#3208C1	Bovine
+SBV097_plate02	#3208C1	Bovine
+SBV098_plate02	#3208C1	Bovine
+SBV099_plate02	#3208C1	Bovine
+SBV100_plate02	#3208C1	Bovine
+SBV101_plate02	#3208C1	Bovine
+SBV102_plate02	#3208C1	Bovine
+SBV103_plate02	#3208C1	Bovine
+SBV104_plate02	#3208C1	Bovine
+SBV105_plate02	#3208C1	Bovine
+SBV106_plate02	#3208C1	Bovine
+SBV107_plate02	#3208C1	Bovine
+SBV108_plate02	#3208C1	Bovine
+SBV109_plate02	#3208C1	Bovine
+SBV110_plate02	#3208C1	Bovine
+SBV111_plate02	#3208C1	Bovine
+SBV112_plate02	#3208C1	Bovine
+SBV113_plate02	#FF005D	Human
+SBV114_plate02	#FF005D	Human
+SBV115_plate02	#FF005D	Human
+SBV116_plate02	#FF005D	Human
+SBV117_plate02	#FF005D	Human
+SBV118_plate02	#FF005D	Human
+SBV119_plate02	#FF005D	Human
+SBV120_plate02	#FF005D	Human
+SBV121_plate02	#FF005D	Human
+SBV122_plate02	#FF005D	Human
+SBV123_plate02	#FF005D	Human
+SBV124_plate02	#FF4C00	Ovine
+SBV125_plate02	#3208C1	Bovine
+SBV126_plate03	#3208C1	Bovine
+SBV127_plate02	#3208C1	Bovine
+SBV128_plate02	#3208C1	Bovine
+SBV129_plate02	#3208C1	Bovine
+SBV130_plate02	#3208C1	Bovine
+SBV131_plate03	#3208C1	Bovine
+SBV132_plate02	#3208C1	Bovine
+SBV133_plate02	#3208C1	Bovine
+SBV134_plate02	#3208C1	Bovine
+SBV135_plate02	#FF00DB	Feline
+SBV136_plate02	#004D40	Equine
+SBV137_plate03	#3208C1	Bovine
+SBV138_plate02	#3208C1	Bovine
+SBV139_plate02	#3208C1	Bovine
+SBV140_plate02	#3208C1	Bovine
+SBV141_plate02	#3208C1	Bovine
+SBV142_plate02	#3208C1	Bovine
+SBV143_plate02	#3208C1	Bovine
+SBV144_plate02	#3208C1	Bovine
+SBV145_plate02	#7733D6	Canine
+SBV146_plate02	#3208C1	Bovine
+SBV147_plate02	#3208C1	Bovine
+SBV148_plate02	#3208C1	Bovine
+SBV149_plate03	#3208C1	Bovine
+SBV150_plate02	#3208C1	Bovine
+SBV151_plate02	#3208C1	Bovine
+SBV152_plate02	#3208C1	Bovine
+SBV153_plate02	#3208C1	Bovine
+SBV154_plate03	#FF005D	Human
+SBV155_plate03	#FF005D	Human
+SBV156_plate02	#FF005D	Human
+SBV157_plate02	#FF005D	Human
+SBV158_plate02	#FF005D	Human
+SBV159_plate02	#FF005D	Human
+SBV160_plate02	#FF005D	Human
+SBV161_plate02	#FF005D	Human
+SBV162_plate02	#FF005D	Human
+SBV163_plate02	#FF005D	Human
+SBV164_plate02	#FF005D	Human
+SBV165_plate02	#FF005D	Human
+SBV166_plate02	#FF005D	Human
+SBV167_plate02	#FF005D	Human
+SBV168_plate02	#FF005D	Human
+SBV169_plate02	#FF005D	Human
+SBV170_plate02	#FF005D	Human
+SBV171_plate02	#FF4C00	Ovine
+SBV172_plate02	#3208C1	Bovine
+SBV173_plate02	#3208C1	Bovine
+SBV174_plate02	#3208C1	Bovine
+SBV175_plate02	#3208C1	Bovine
+SBV176_plate02	#7733D6	Canine
+SBV177_plate03	#3208C1	Bovine
+SBV178_plate03	#3208C1	Bovine
+SBV179_plate03	#3208C1	Bovine
+SBV180_plate03	#3208C1	Bovine
+SBV181_plate03	#FF00DB	Feline
+SBV183_plate03	#3208C1	Bovine
+SBV184_plate03	#3208C1	Bovine
+SBV185_plate03	#3208C1	Bovine
+SBV186_plate03	#3208C1	Bovine
+SBV187_plate03	#3208C1	Bovine
+SBV188_plate03	#3208C1	Bovine
+SBV189_plate03	#3208C1	Bovine
+SBV190_plate03	#3208C1	Bovine
+SBV191_plate03	#004D40	Equine
+SBV192_plate03	#3208C1	Bovine
+SBV193_plate03	#3208C1	Bovine
+SBV194_plate03	#7733D6	Canine
+SBV195_plate03	#3208C1	Bovine
+SBV196_plate03	#3208C1	Bovine
+SBV197_plate03	#3208C1	Bovine
+SBV198_plate03	#3208C1	Bovine
+SBV199_plate03	#FF00DB	Feline
+SBV200_plate03	#3208C1	Bovine
+SBV201_plate03	#3208C1	Bovine
+SBV202_plate03	#3208C1	Bovine
+SBV203_plate03	#FF005D	Human
+SBV204_plate03	#FF005D	Human
+SBV205_plate03	#FF005D	Human
+SBV206_plate03	#FF005D	Human
+SBV207_plate03	#FF005D	Human
+SBV208_plate03	#FF005D	Human
+SBV209_plate03	#FF005D	Human
+SBV210_plate03	#FF005D	Human
+SBV211_plate03	#FF005D	Human
+SBV212_plate03	#FF005D	Human
+SBV213_plate03	#FF005D	Human
+SBV214_plate03	#FF005D	Human
+SBV215_plate03	#FF005D	Human
+SBV216_plate03	#3208C1	Bovine
+SBV217_plate03	#3208C1	Bovine
+SBV218_plate05	#3208C1	Bovine
+SBV219_plate03	#3208C1	Bovine
+SBV220_plate03	#FF4C00	Ovine
+SBV221_plate03	#3208C1	Bovine
+SBV222_plate03	#3208C1	Bovine
+SBV223_plate03	#7733D6	Canine
+SBV224_plate03	#3208C1	Bovine
+SBV225_plate03	#3208C1	Bovine
+SBV226_plate03	#3208C1	Bovine
+SBV227_plate03	#3208C1	Bovine
+SBV228_plate03	#3208C1	Bovine
+SBV229_plate03	#FF00DB	Feline
+SBV230_plate03	#3208C1	Bovine
+SBV231_plate03	#3208C1	Bovine
+SBV232_plate03	#3208C1	Bovine
+SBV233_plate03	#3208C1	Bovine
+SBV234_plate05	#3208C1	Bovine
+SBV235_plate05	#3208C1	Bovine
+SBV236_plate03	#3208C1	Bovine
+SBV237_plate03	#EAE600	Avian
+SBV238_plate03	#3208C1	Bovine
+SBV239_plate03	#7733D6	Canine
+SBV240_plate05	#3208C1	Bovine
+SBV241_plate03	#3208C1	Bovine
+SBV242_plate03	#3208C1	Bovine
+SBV243_plate03	#3208C1	Bovine
+SBV244_plate03	#3208C1	Bovine
+SBV245_plate03	#3208C1	Bovine
+SBV246_plate03	#3208C1	Bovine
+SBV247_plate03	#FF005D	Human
+SBV248_plate05	#FF005D	Human
+SBV249_plate03	#FF005D	Human
+SBV251_plate03	#FF005D	Human
+SBV252_plate03	#FF005D	Human
+SBV253_plate03	#FF005D	Human
+SBV254_plate03	#FF005D	Human
+SBV255_plate03	#FF005D	Human
+SBV256_plate03	#FF005D	Human
+SBV257_plate05	#3208C1	Bovine
+SBV258_plate03	#FF005D	Human
+SBV259_plate03	#FF005D	Human
+SBV260_plate03	#FF005D	Human
+SBV261_plate03	#FF005D	Human
+SBV262_plate03	#3208C1	Bovine
+SBV263_plate03	#3208C1	Bovine
+SBV265_plate03	#3208C1	Bovine
+SBV266_plate03	#FF00DB	Feline
+SBV267_plate03	#7733D6	Canine
+SBV268_plate03	#3208C1	Bovine
+SBV269_plate05	#3208C1	Bovine
+SBV270_plate04	#3208C1	Bovine
+SBV271_plate04	#3208C1	Bovine
+SBV272_plate04	#3208C1	Bovine
+SBV273_plate04	#3208C1	Bovine
+SBV274_plate04	#3208C1	Bovine
+SBV275_plate04	#3208C1	Bovine
+SBV276_plate04	#3208C1	Bovine
+SBV277_plate04	#3208C1	Bovine
+SBV278_plate04	#3208C1	Bovine
+SBV279_plate04	#3208C1	Bovine
+SBV280_plate05	#3208C1	Bovine
+SBV281_plate04	#3208C1	Bovine
+SBV282_plate04	#3208C1	Bovine
+SBV283_plate04	#3208C1	Bovine
+SBV284_plate04	#7733D6	Canine
+SBV285_plate04	#3208C1	Bovine
+SBV286_plate04	#3208C1	Bovine
+SBV287_plate04	#3208C1	Bovine
+SBV288_plate04	#3208C1	Bovine
+SBV289_plate04	#3208C1	Bovine
+SBV290_plate04	#FF00DB	Feline
+SBV291_plate04	#3208C1	Bovine
+SBV292_plate04	#3208C1	Bovine
+SBV293_plate04	#FF005D	Human
+SBV294_plate04	#FF005D	Human
+SBV295_plate04	#FF005D	Human
+SBV296_plate04	#FF005D	Human
+SBV297_plate04	#FF005D	Human
+SBV298_plate04	#FF005D	Human
+SBV299_plate04	#FF005D	Human
+SBV300_plate04	#FF005D	Human
+SBV301_plate04	#FF005D	Human
+SBV302_plate04	#FF005D	Human
+SBV304_plate04	#FF005D	Human
+SBV305_plate04	#FF005D	Human
+SBV306_plate04	#FF005D	Human
+SBV307_plate04	#3208C1	Bovine
+SBV308_plate04	#3208C1	Bovine
+SBV309_plate04	#3208C1	Bovine
+SBV310_plate04	#3208C1	Bovine
+SBV311_plate04	#3208C1	Bovine
+SBV312_plate04	#3208C1	Bovine
+SBV313_plate04	#7733D6	Canine
+SBV314_plate04	#3208C1	Bovine
+SBV315_plate04	#3208C1	Bovine
+SBV316_plate04	#3208C1	Bovine
+SBV317_plate04	#3208C1	Bovine
+SBV318_plate04	#FF4C00	Ovine
+SBV319_plate04	#07F1FF	Porcine
+SBV320_plate04	#3208C1	Bovine
+SBV321_plate04	#3208C1	Bovine
+SBV322_plate04	#3208C1	Bovine
+SBV323_plate04	#3208C1	Bovine
+SBV324_plate04	#3208C1	Bovine
+SBV325_plate04	#3208C1	Bovine
+SBV326_plate04	#3208C1	Bovine
+SBV327_plate04	#3208C1	Bovine
+SBV328_plate04	#3208C1	Bovine
+SBV329_plate04	#3208C1	Bovine
+SBV330_plate04	#3208C1	Bovine
+SBV331_plate04	#3208C1	Bovine
+SBV332_plate04	#3208C1	Bovine
+SBV333_plate04	#FF00DB	Feline
+SBV334_plate04	#3208C1	Bovine
+SBV335_plate04	#3208C1	Bovine
+SBV336_plate04	#3208C1	Bovine
+SBV337_plate04	#3208C1	Bovine
+SBV338_plate04	#FF005D	Human
+SBV339_plate04	#FF005D	Human
+SBV340_plate04	#FF005D	Human
+SBV341_plate04	#FF005D	Human
+SBV342_plate04	#FF005D	Human
+SBV343_plate04	#3208C1	Bovine
+SBV344_plate04	#FF005D	Human
+SBV345_plate04	#FF00DB	Feline
+SBV347_plate04	#FF005D	Human
+SBV348_plate04	#FF4C00	Ovine
+SBV349_plate04	#FF005D	Human
+SBV350_plate04	#FF005D	Human
+SBV351_plate04	#FF005D	Human
+SBV352_plate04	#7733D6	Canine
+SBV353_plate04	#3208C1	Bovine
+SBV354_plate04	#3208C1	Bovine
+SBV355_plate04	#004D40	Equine
+SBV356_plate04	#FF005D	Human
+SBV357_plate04	#3208C1	Bovine
+SBV358_plate04	#3208C1	Bovine
+SBV359_plate04	#3208C1	Bovine
+SBV361_plate04	#3208C1	Bovine
+SBV362_plate04	#3208C1	Bovine
+SBV363_plate04	#3208C1	Bovine
+SBV364_plate04	#FF005D	Human
+SBV365_plate04	#3208C1	Bovine
+SBV366_plate04	#3208C1	Bovine
+SBV367_plate04	#FF005D	Human
+SBV368_plate04	#3208C1	Bovine
+SBV369_plate04	#3208C1	Bovine
+SBV370_plate05	#7733D6	Canine
+SBV371_plate05	#3208C1	Bovine
+SBV372_plate05	#FF005D	Human
+SBV373_plate05	#3208C1	Bovine
+SBV374_plate05	#EAE600	Avian
+SBV375_plate05	#3208C1	Bovine
+SBV376_plate05	#3208C1	Bovine
+
+
+
+

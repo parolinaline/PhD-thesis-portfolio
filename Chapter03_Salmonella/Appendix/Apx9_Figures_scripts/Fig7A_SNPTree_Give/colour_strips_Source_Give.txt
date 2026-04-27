@@ -1,0 +1,151 @@
+DATASET_COLORSTRIP
+#In colored strip datasets, each ID is associated to a color box/strip and can have an optional label. Color can be specified in hexadecimal, RGB or RGBA notation. When using RGB or RGBA notation, you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+
+SEPARATOR TAB
+#SEPARATOR COMMA
+#SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+
+DATASET_LABEL	Source
+FIELD_LABELS	Source
+
+
+#dataset color (can be changed later)
+COLOR	#192a51
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1, branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color, it will be colored the same, ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES	0
+
+#each dataset can have a legend, which is defined below
+#for each row in the legend, there should be one shape, color and label
+#shape should be a number between 1 and 5:
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+
+LEGEND_TITLE	Source						
+LEGEND_SHAPES	1	1	1	1	1	1	1
+LEGEND_COLORS	#D81B60	#1E88E5	#FFC107	#004D40	#681D1E	#B5EC65	#8366A2
+LEGEND_LABELS	Bovine	Canine	Equine	Feline	Human	Ovine	Poultry
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#width of the colored strip
+#STRIP_WIDTH 25
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN 0
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the color strip
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+SGV002	#681D1E	Human
+SGV003	#681D1E	Human
+SGV004	#D81B60	Bovine
+SGV005	#681D1E	Human
+SGV006	#681D1E	Human
+SGV007	#681D1E	Human
+SGV008	#681D1E	Human
+SGV009	#681D1E	Human
+SGV010	#681D1E	Human
+SGV011	#681D1E	Human
+SGV012	#681D1E	Human
+SGV013	#681D1E	Human
+SGV014	#681D1E	Human
+SGV016	#681D1E	Human
+SGV017	#681D1E	Human
+SGV018	#681D1E	Human
+SGV019	#8366A2	Poultry
+SGV020	#681D1E	Human
+SGV021	#D81B60	Bovine
+SGV022	#D81B60	Bovine
+SGV023	#D81B60	Bovine
+SGV025	#D81B60	Bovine
+SGV026	#D81B60	Bovine
+SGV027	#D81B60	Bovine
+SGV028	#D81B60	Bovine
+SGV029	#D81B60	Bovine
+SGV030	#D81B60	Bovine
+SGV031	#D81B60	Bovine
+SGV032	#681D1E	Human
+SGV033	#681D1E	Human
+SGV034	#681D1E	Human
+SGV035	#004D40	Feline
+SGV036	#D81B60	Bovine
+SGV037	#D81B60	Bovine
+SGV038	#D81B60	Bovine
+SGV039	#1E88E5	Canine
+SGV040	#D81B60	Bovine
+SGV041	#D81B60	Bovine
+SGV042	#D81B60	Bovine
+SGV043	#D81B60	Bovine
+SGV044	#D81B60	Bovine
+SGV045	#1E88E5	Canine
+SGV046	#D81B60	Bovine
+SGV047	#D81B60	Bovine
+SGV048	#D81B60	Bovine
+SGV049	#681D1E	Human
+SGV050	#681D1E	Human
+SGV051	#D81B60	Bovine
+SGV052	#1E88E5	Canine
+SGV053	#D81B60	Bovine
+SGV054	#1E88E5	Canine
+SGV055	#D81B60	Bovine
+SGV056	#1E88E5	Canine
+SGV057	#D81B60	Bovine
+SGV058	#1E88E5	Canine
+SGV059	#D81B60	Bovine
+SGV060	#D81B60	Bovine
+SGV061	#1E88E5	Canine
+SGV062	#D81B60	Bovine
+SGV063	#B5EC65	Ovine
+SGV064	#D81B60	Bovine
+SGV065	#1E88E5	Canine
+SGV066	#681D1E	Human
+SGV067	#D81B60	Bovine
+SGV068	#1E88E5	Canine
+SGV069	#D81B60	Bovine
+SGV070	#1E88E5	Canine
+SGV071	#681D1E	Human
+SGV072	#004D40	Feline
+SGV073	#1E88E5	Canine
+SGV074	#681D1E	Human
+SGV075	#D81B60	Bovine
+SGV077	#1E88E5	Canine
+SGV078	#D81B60	Bovine
+SGV079	#1E88E5	Canine
+SGV080	#FFC107	Equine
+SGV081	#D81B60	Bovine
+SGV082	#D81B60	Bovine

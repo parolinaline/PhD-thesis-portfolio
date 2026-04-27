@@ -1,0 +1,13 @@
+SALMONELLA GIVE
+
+module load SeqKit/2.12.0
+seqkit stats gubbins_out.masked.fasta 
+file                      format  type  num_seqs      sum_len    min_len    avg_len    max_len
+gubbins_out.masked.fasta  FASTA   DNA         74  346,945,818  4,688,457  4,688,457  4,688,457
+
+module load snp-sites/2.5.1-GCC-12.3.0
+snp-sites -C gubbins_out.masked.fasta
+1101001,1208155,1207833,1104605
+
+snp-sites -C outputs the constant site counts, not the SNP count. So your core SNP count is:
+4,054,511 - () =  core SNPs

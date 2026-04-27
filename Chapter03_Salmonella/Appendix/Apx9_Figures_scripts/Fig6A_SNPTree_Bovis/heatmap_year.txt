@@ -1,0 +1,533 @@
+DATASET_HEATMAP
+#In heatmaps, each ID is associated to multiple numeric values, which are displayed as a set of colored boxes defined by a color gradient
+#lines starting with a hash are comments and ignored during parsing
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file.
+SEPARATOR TAB
+#SEPARATOR SPACE
+#SEPARATOR COMMA
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL	Year
+
+#dataset color (can be changed later)
+COLOR	#ff0000
+
+#define labels for each individual field column
+FIELD_LABELS	Year
+
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+
+#Heatmaps can have an optional Newick formatted tree assigned. Its leaf IDs must exactly match the dataset FIELD_LABELS.
+#The tree will be used to sort the dataset fields, and will be displayed above the dataset. It can have branch lengths defined.
+#All newlines and spaces should be stripped from the tree, and COMMA cannot be used as the dataset separator if a FIELD_TREE is provided.
+#FIELD_TREE (((f1:0.2,f5:0.5):1,(f2:0.2,f3:0.3):1.2):0.5,(f4:0.1,f6:0.5):0.8):1;
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#Each dataset can have a legend, which is defined using LEGEND_XXX fields below
+#For each row in the legend, there should be one shape, color and label.
+#Optionally, you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning, do NOT define these values
+#Optionally, shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape, you can define a scaling factor between 0 and 1.
+#To order legend entries horizontally instead of vertically, set LEGEND_HORIZONTAL to 1
+#Shape should be a number between 1 and 6, or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+#LEGEND_TITLE,Dataset legend
+#LEGEND_SCALE,1
+#LEGEND_POSITION_X,100
+#LEGEND_POSITION_Y,100
+#LEGEND_HORIZONTAL,0
+#LEGEND_SHAPES,1,2,3
+#LEGEND_COLORS,#ff0000,#00ff00,#0000ff
+#LEGEND_LABELS,value1,value2,value3
+#LEGEND_SHAPE_SCALES,1,1,0.5
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN 0
+
+#width of the individual boxes
+#STRIP_WIDTH 25
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#show dashed lines between leaf labels and the dataset
+#DASHED_LINES 1
+
+#if a FIELD_TREE is present, it can be hidden by setting this option to 0
+#SHOW_TREE 1
+
+#define the color for the NULL values in the dataset. Use the letter X in the data to define the NULL values
+#COLOR_NAN #000000
+
+#automatically create and display a legend based on the color gradients and values defined below
+#AUTO_LEGEND 1
+
+#define the heatmap gradient colors. Values in the dataset will be mapped onto the corresponding color gradient.
+COLOR_MIN	#ff0000
+COLOR_MAX	#0000ff
+
+#you can specify a gradient with three colors (e.g red to yellow to green) by setting 'USE_MID_COLOR' to 1, and specifying the midpoint color
+#USE_MID_COLOR 1
+#COLOR_MID #ffff00
+
+#By default, color gradients will be calculated based on dataset values. You can force different values to use in the calculation by setting the values below:
+#USER_MIN_VALUE 0
+#USER_MID_VALUE 500
+#USER_MAX_VALUE 1000
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around individual cells
+#BORDER_WIDTH 0
+
+#border color; used only when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#display or hide the text labels above each field column
+#SHOW_LABELS 1
+
+#text label size factor
+#SIZE_FACTOR 1
+
+#text label rotation
+#LABEL_ROTATION 0
+
+#text label shift in pixels (positive or negative)
+#LABEL_SHIFT 0
+
+#align fields labels to the tree circle; only applies in circular display mode and when FIELD_TREE is not displayed
+#LABEL_ALIGN_TO_TREE,0
+
+#normalize the data using the function specified in NORMALIZATION_TYPE. DATA_NORMALIZATION can be set to
+#'rows' (normalize data for each tree leaf) or 'columns' (normalize data for each heatmap field)
+#DATA_NORMALIZATION rows
+
+#type of normalization to apply. The following types are available:
+#normal: values will be normalized between values A and B (specified in NORMALIZATION_RANGE) using the formula A+(val-min)*(B-A)/(max-min)
+#mean: values will be normalized between -1 and 1 using the formula (val-mean)/(max-min)
+#scaling: values will be Z-score normalized using the formula (val-mean)/std.dev
+#NORMALIZATION_TYPE scaling
+
+#used to define the A-B range for standard normalization
+#NORMALIZATION_RANGE 0 3
+
+#Display the actual values inside the heatmap boxes. Can be either 'original' or 'normalized'. If the data is not normalized, original values will be used in any case.
+#DISPLAY_VALUES normalized
+
+#round the display values to this number of decimal points
+#ROUND_VALUES 2
+
+#if set to 1, display values using scientific notation (e.g. 1e3 is 1000). Can be combined with ROUND_VALUES
+#VALUES_SCI_NOTATION 1
+
+#color of the value labels
+#VALUE_COLOR #0000ff
+
+#if set to 1, calculate the value label color automatically, based on the darkness of the heatmap box. Labels will be white or black.
+#VALUE_AUTO_COLOR 1
+
+#shift the position of the value labels by the specified number of pixels (X and Y)
+#VALUE_SHIFT 0 0
+
+#rotate the value labels by this angle
+#VALUE_ROTATION 0
+
+#multiply the value label font size by this factor
+#VALUE_SIZE_FACTOR 1
+
+
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+#ID1 value1 value2 value3 value4 value5 value6
+#You can use the 'X' letter instead of the numeric value to denote the empty fields. These will be colored using 'COLOR_NAN' option set above.
+SBV001_plate05	2003
+SBV002_plate01	2011
+SBV003_plate01	2013
+SBV004_plate01	2014
+SBV005_plate01	2004
+Reference	2004
+SBV006_plate01	2004
+SBV007_plate01	2015
+SBV008_plate01	2012
+SBV009_plate01	2006
+SBV010_plate01	2007
+SBV011_plate01	2008
+SBV012_plate01	2008
+SBV013_plate01	2009
+SBV014_plate01	2009
+SBV015_plate01	2010
+SBV016_plate01	2010
+SBV017_plate01	2011
+SBV018_plate01	2011
+SBV019_plate01	2011
+SBV020_plate01	2012
+SBV021_plate01	2012
+SBV022_plate01	2012
+SBV023_plate01	2016
+SBV024_plate01	2012
+SBV025_plate01	2012
+SBV025_plate01	2012
+SBV026_plate01	2013
+SBV027_plate01	2013
+SBV028_plate01	2013
+SBV029_plate01	2013
+SBV030_plate01	2014
+SBV031_plate01	2014
+SBV032_plate01	2014
+SBV033_plate01	2014
+SBV035_plate01	2015
+SBV036_plate01	2015
+SBV037_plate01	2015
+SBV038_plate01	2015
+SBV039_plate01	2015
+SBV040_plate03	2015
+SBV041_plate01	2015
+SBV042_plate01	2015
+SBV043_plate01	2015
+SBV044_plate01	2015
+SBV045_plate01	2015
+SBV046_plate01	2015
+SBV047_plate01	2015
+SBV048_plate01	2015
+SBV049_plate01	2015
+SBV050_plate01	2015
+SBV051_plate01	2015
+SBV052_plate01	2015
+SBV053_plate01	2015
+SBV054_plate01	2015
+SBV055_plate01	2015
+SBV056_plate01	2015
+SBV057_plate01	2015
+SBV058_plate01	2015
+SBV059_plate01	2015
+SBV060_plate01	2015
+SBV061_plate01	2015
+SBV062_plate01	2015
+SBV063_plate01	2015
+SBV064_plate01	2015
+SBV065_plate03	2015
+SBV066_plate01	2015
+SBV067_plate01	2015
+SBV068_plate01	2015
+SBV069_plate01	2015
+SBV070_plate01	2015
+SBV071_plate01	2015
+SBV072_plate02	2016
+SBV073_plate03	2016
+SBV074_plate03	2016
+SBV075_plate02	2016
+SBV076_plate02	2016
+SBV077_plate02	2016
+SBV078_plate02	2016
+SBV079_plate02	2016
+SBV080_plate02	2016
+SBV081_plate02	2016
+SBV082_plate02	2016
+SBV083_plate02	2016
+SBV084_plate02	2016
+SBV085_plate03	2016
+SBV086_plate02	2016
+SBV087_plate02	2016
+SBV088_plate02	2016
+SBV089_plate02	2016
+SBV090_plate02	2016
+SBV091_plate02	2016
+SBV092_plate02	2016
+SBV093_plate02	2016
+SBV094_plate02	2016
+SBV095_plate02	2016
+SBV096_plate02	2016
+SBV097_plate02	2016
+SBV098_plate02	2016
+SBV099_plate02	2016
+SBV100_plate02	2016
+SBV101_plate02	2016
+SBV102_plate02	2016
+SBV103_plate02	2016
+SBV104_plate02	2016
+SBV105_plate02	2016
+SBV106_plate02	2016
+SBV107_plate02	2016
+SBV108_plate02	2016
+SBV109_plate02	2019
+SBV110_plate02	2016
+SBV111_plate02	2016
+SBV112_plate02	2016
+SBV113_plate02	2017
+SBV114_plate02	2017
+SBV115_plate02	2017
+SBV116_plate02	2017
+SBV117_plate02	2017
+SBV118_plate02	2017
+SBV119_plate02	2017
+SBV120_plate02	2017
+SBV121_plate02	2017
+SBV122_plate02	2017
+SBV123_plate02	2017
+SBV124_plate02	2017
+SBV125_plate02	2017
+SBV126_plate03	2017
+SBV127_plate02	2017
+SBV128_plate02	2017
+SBV129_plate02	2017
+SBV130_plate02	2017
+SBV131_plate03	2017
+SBV132_plate02	2017
+SBV133_plate02	2017
+SBV134_plate02	2017
+SBV135_plate02	2017
+SBV136_plate02	2017
+SBV137_plate03	2017
+SBV138_plate02	2017
+SBV139_plate02	2017
+SBV140_plate02	2017
+SBV141_plate02	2017
+SBV142_plate02	2017
+SBV143_plate02	2017
+SBV144_plate02	2017
+SBV145_plate02	2017
+SBV146_plate02	2017
+SBV147_plate02	2017
+SBV148_plate02	2017
+SBV149_plate03	2017
+SBV150_plate02	2017
+SBV151_plate02	2017
+SBV152_plate02	2017
+SBV153_plate02	2017
+SBV154_plate03	2018
+SBV155_plate03	2018
+SBV156_plate02	2018
+SBV157_plate02	2018
+SBV158_plate02	2018
+SBV159_plate02	2018
+SBV160_plate02	2018
+SBV161_plate02	2018
+SBV162_plate02	2018
+SBV163_plate02	2018
+SBV164_plate02	2018
+SBV165_plate02	2018
+SBV166_plate02	2018
+SBV167_plate02	2018
+SBV168_plate02	2018
+SBV169_plate02	2018
+SBV170_plate02	2018
+SBV171_plate02	2018
+SBV172_plate02	2018
+SBV173_plate02	2018
+SBV174_plate02	2018
+SBV175_plate02	2018
+SBV176_plate02	2018
+SBV177_plate03	2018
+SBV178_plate03	2018
+SBV179_plate03	2018
+SBV180_plate03	2018
+SBV181_plate03	2018
+SBV183_plate03	2018
+SBV184_plate03	2018
+SBV185_plate03	2018
+SBV186_plate03	2018
+SBV187_plate03	2018
+SBV188_plate03	2018
+SBV189_plate03	2018
+SBV190_plate03	2018
+SBV191_plate03	2018
+SBV192_plate03	2018
+SBV193_plate03	2018
+SBV194_plate03	2018
+SBV195_plate03	2018
+SBV196_plate03	2018
+SBV197_plate03	2018
+SBV198_plate03	2018
+SBV199_plate03	2018
+SBV200_plate03	2018
+SBV201_plate03	2018
+SBV202_plate03	2018
+SBV203_plate03	2019
+SBV204_plate03	2019
+SBV205_plate03	2019
+SBV206_plate03	2019
+SBV207_plate03	2019
+SBV208_plate03	2019
+SBV209_plate03	2019
+SBV210_plate03	2019
+SBV211_plate03	2019
+SBV212_plate03	2019
+SBV213_plate03	2019
+SBV214_plate03	2019
+SBV215_plate03	2019
+SBV216_plate03	2019
+SBV217_plate03	2019
+SBV218_plate05	2019
+SBV219_plate03	2019
+SBV220_plate03	2019
+SBV221_plate03	2019
+SBV222_plate03	2019
+SBV223_plate03	2019
+SBV224_plate03	2019
+SBV225_plate03	2019
+SBV226_plate03	2019
+SBV227_plate03	2019
+SBV228_plate03	2019
+SBV229_plate03	2019
+SBV230_plate03	2019
+SBV231_plate03	2019
+SBV232_plate03	2019
+SBV233_plate03	2019
+SBV234_plate05	2019
+SBV235_plate05	2019
+SBV236_plate03	2019
+SBV237_plate03	2019
+SBV238_plate03	2019
+SBV239_plate03	2019
+SBV240_plate05	2019
+SBV241_plate03	2019
+SBV242_plate03	2019
+SBV243_plate03	2019
+SBV244_plate03	2019
+SBV245_plate03	2019
+SBV246_plate03	2019
+SBV247_plate03	2020
+SBV248_plate05	2020
+SBV249_plate03	2020
+SBV251_plate03	2020
+SBV252_plate03	2020
+SBV253_plate03	2020
+SBV254_plate03	2020
+SBV255_plate03	2020
+SBV256_plate03	2020
+SBV257_plate05	2019
+SBV258_plate03	2020
+SBV259_plate03	2020
+SBV260_plate03	2020
+SBV261_plate03	2020
+SBV262_plate03	2020
+SBV263_plate03	2020
+SBV265_plate03	2020
+SBV266_plate03	2020
+SBV267_plate03	2020
+SBV268_plate03	2020
+SBV269_plate05	2020
+SBV270_plate04	2020
+SBV271_plate04	2020
+SBV272_plate04	2020
+SBV273_plate04	2020
+SBV274_plate04	2020
+SBV275_plate04	2020
+SBV276_plate04	2020
+SBV277_plate04	2020
+SBV278_plate04	2020
+SBV279_plate04	2020
+SBV280_plate05	2019
+SBV281_plate04	2020
+SBV282_plate04	2020
+SBV283_plate04	2020
+SBV284_plate04	2020
+SBV285_plate04	2020
+SBV286_plate04	2020
+SBV287_plate04	2020
+SBV288_plate04	2020
+SBV289_plate04	2020
+SBV290_plate04	2020
+SBV291_plate04	2020
+SBV292_plate04	2020
+SBV293_plate04	2021
+SBV294_plate04	2021
+SBV295_plate04	2021
+SBV296_plate04	2021
+SBV297_plate04	2021
+SBV298_plate04	2021
+SBV299_plate04	2021
+SBV300_plate04	2021
+SBV301_plate04	2021
+SBV302_plate04	2021
+SBV304_plate04	2021
+SBV305_plate04	2021
+SBV306_plate04	2021
+SBV307_plate04	2021
+SBV308_plate04	2021
+SBV309_plate04	2021
+SBV310_plate04	2021
+SBV311_plate04	2021
+SBV312_plate04	2021
+SBV313_plate04	2021
+SBV314_plate04	2021
+SBV315_plate04	2021
+SBV316_plate04	2021
+SBV317_plate04	2021
+SBV318_plate04	2021
+SBV319_plate04	2021
+SBV320_plate04	2021
+SBV321_plate04	2021
+SBV322_plate04	2021
+SBV323_plate04	2021
+SBV324_plate04	2021
+SBV325_plate04	2021
+SBV326_plate04	2021
+SBV327_plate04	2021
+SBV328_plate04	2021
+SBV329_plate04	2021
+SBV330_plate04	2021
+SBV331_plate04	2021
+SBV332_plate04	2021
+SBV333_plate04	2021
+SBV334_plate04	2021
+SBV335_plate04	2021
+SBV336_plate04	2021
+SBV337_plate04	2015
+SBV338_plate04	2022
+SBV339_plate04	2022
+SBV340_plate04	2022
+SBV341_plate04	2022
+SBV342_plate04	2022
+SBV343_plate04	2022
+SBV344_plate04	2022
+SBV345_plate04	2022
+SBV347_plate04	2022
+SBV348_plate04	2022
+SBV349_plate04	2022
+SBV350_plate04	2022
+SBV351_plate04	2022
+SBV352_plate04	2022
+SBV353_plate04	2022
+SBV354_plate04	2022
+SBV355_plate04	2022
+SBV356_plate04	2022
+SBV357_plate04	2022
+SBV358_plate04	2022
+SBV359_plate04	2022
+SBV361_plate04	2022
+SBV362_plate04	2022
+SBV363_plate04	2022
+SBV364_plate04	2022
+SBV365_plate04	2022
+SBV366_plate04	2022
+SBV367_plate04	2022
+SBV368_plate04	2022
+SBV369_plate04	2022
+SBV370_plate05	2022
+SBV371_plate05	2022
+SBV372_plate05	2022
+SBV373_plate05	2022
+SBV374_plate05	2022
+SBV375_plate05	2022
+SBV376_plate05	2022
