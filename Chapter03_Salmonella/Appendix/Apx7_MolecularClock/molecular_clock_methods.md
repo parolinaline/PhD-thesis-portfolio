@@ -21,6 +21,13 @@ The starting point for all temporal analyses was the **recombination-filtered co
 | *S.* Bovismorbificans ST377 | 340 | 24,410 |
 | *S.* Give ST654 | 55 | 44,498 |
 
+To prepare the alignments and tree files to have headers with the date of isolation and filter out only isolates from ST377 and ST654, the following script can be followed:
+
+![Decimal date ST377](./other_scripts/filter_ST377_decimal_date.R)
+![YMD date ST377](./other_scripts/filter_ST377_YMD_date.R)
+![Decimal date ST654](./other_scripts/filter_ST654_decimal_date.R)
+![YMD date ST654](./other_scripts/filter_ST654_YMD_date.R)
+
 SNP calling was performed using **Clair3** on Oxford Nanopore long reads, with `minimap2` for reference alignment and `BCFtools` for VCF processing. Gubbins was then used to mask recombination regions and produce the final variant-only alignment used as input here.
 
 Maximum-likelihood trees were built from each SNP alignment using **IQ-TREE2**, which also performed substitution model selection:
