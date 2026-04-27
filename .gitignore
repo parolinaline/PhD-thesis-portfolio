@@ -58,8 +58,9 @@ env/
 slurm-*.out
 
 # Temporary files
-*tmp*
-*temp*
+*_tmp*
+*-temp*
+*temp
 
 # Node (if using any JS tools)
 node_modules/
