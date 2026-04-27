@@ -220,6 +220,9 @@ The resulting counts were added to the BEAST2 XML file in the `<data>` block:
 For ST377 (reference ~4.71 Mb), the values were approximately:
 `constantSiteWeights="1125375 1230664 1230288 1124187"`
 
+For ST654 (reference ~4.71 Mb), the values were approximately:
+`constantSiteWeights="1117215 1225498 1224359 1121385"`
+
 ---
 
 ## 4. Clock Model Selection — BEAST2 Path Sampling
