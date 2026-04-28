@@ -257,6 +257,18 @@ For ST377 (reference ~4.71 Mb), the values were approximately:
 For ST654 (reference ~4.71 Mb), the values were approximately:
 `constantSiteWeights="1117215 1225498 1224359 1121385"`
 
+**Editing the xml file:**
+- After saving te xml file we should add the constant site weights editing the file in a text editor:
+The xml file will be empty, like this:
+</data>
+Then it should look like this:
+    </data>
+	<data id="ST377_filtered_masked_Gubbins" spec="FilteredAlignment" filter="-" data="@Original-ST377_filtered_masked_Gubbins" constantSiteWeights="306106393 336144977 335779075 306128624"/> 
+The id line (first line), should also be edited:
+from:
+<data id="ST377_filtered_masked_Gubbins"
+to:
+<data id="Original-ST377_filtered_masked_Gubbins"
 ---
 
 ## 4. Clock Model Selection — BEAST2 Path Sampling
@@ -278,19 +290,6 @@ Before running the final BEAST2 analysis, **path sampling (stepping-stone)** was
    - Chain length per step: 20,000,000–30,000,000
    - Pre-burnin: 1,000,000
    - Burnin: 50%
-
-**Editing the xml file**
-After saving te xml file we should add the constant site weights editing the file in a text editor:
-The xml file will be empty, like this:
-</data>
-Then it should look like this:
-    </data>
-	<data id="ST377_filtered_masked_Gubbins" spec="FilteredAlignment" filter="-" data="@Original-ST377_filtered_masked_Gubbins" constantSiteWeights="306106393 336144977 335779075 306128624"/> 
-The id line (first line), should also be edited:
-from:
-<data id="ST377_filtered_masked_Gubbins"
-to:
-<data id="Original-ST377_filtered_masked_Gubbins"
 
 Each model (strict + relaxed) was submitted as a separate BEAST2 run on NeSI:
 
