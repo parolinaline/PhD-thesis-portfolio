@@ -1,0 +1,5 @@
+SEQUENCE	GUBBINS	CDS	347410	347440	0.000	.	0	node="Node_247->SC0431";neg_log_likelihood="62009.072784";taxa="SC0431";snp_count="10";
+SEQUENCE	GUBBINS	CDS	340218	345248	0.000	.	0	node="Node_924->SC1244";neg_log_likelihood="597.696933";taxa="SC1244";snp_count="74";
+SEQUENCE	GUBBINS	CDS	337590	347285	0.000	.	0	node="Node_925->SC1113";neg_log_likelihood="1498.896875";taxa="SC1113";snp_count="89";
+SEQUENCE	GUBBINS	CDS	344523	344585	0.000	.	0	node="Node_927->Node_926";neg_log_likelihood="306.647395";taxa="  SC1113  SC0363 SC1244 SC0492";snp_count="3";
+SEQUENCE	GUBBINS	CDS	344477	347264	0.000	.	0	node="Node_929->Node_928";neg_log_likelihood="335.364506";taxa=" SC1296 SC1118";snp_count="5";

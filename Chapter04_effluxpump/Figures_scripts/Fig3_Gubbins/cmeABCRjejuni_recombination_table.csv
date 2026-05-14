@@ -1,0 +1,12 @@
+isolate,rec_start,rec_end,rec_length,rec_type,n_taxa_in_rec,genes_hit,n_genes
+"""",344477,347264,2788,shared,3,cmeB,1
+"""",344523,344585,63,shared,5,cmeB,1
+"""SC0431""",347410,347440,31,unique,1,cmeA,1
+"""SC1113""",337590,347285,9696,unique,1,"cmeC, cmeB",2
+"""SC1244""",340218,345248,5031,unique,1,"cmeC, cmeB",2
+SC0363,344523,344585,63,shared,5,cmeB,1
+"SC0492""",344523,344585,63,shared,5,cmeB,1
+SC1113,344523,344585,63,shared,5,cmeB,1
+"SC1118""",344477,347264,2788,shared,3,cmeB,1
+SC1244,344523,344585,63,shared,5,cmeB,1
+SC1296,344477,347264,2788,shared,3,cmeB,1
